@@ -1,0 +1,29 @@
+
+<p class="d-flex justify-content-end mt-3 new">New to the platform ? <a class="fw-bold " routerLink="/login">Login</a></p>
+<div class="d-flex justify-content-center ">
+    <form  (ngSubmit)="handelSignUpForm()" [formGroup]="SignUpForm" class="h">
+        <!-- <label for="email">email</label> -->
+        <h4 >Sign Up </h4>
+        <input type="email" class=" b d-flex form-control " id="email" formControlName="email" placeholder="Enter Your E-mail">
+        <div *ngIf="SignUpForm.get('email')?.errors && (SignUpForm.get('email')?.touched) || (SignUpForm.get('email')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+            <p *ngIf="SignUpForm.get('email')?.getError('required')" class=""> Email is required</p>
+            <p *ngIf="SignUpForm.get('email')?.getError('email')">Invalid Email</p>
+        </div>
+        <!-- <label for="password">password</label> -->
+        <input type="password" class="d-flex b mt-3 form-control " id="password" formControlName="password" placeholder="Enter Your Password">
+        <div *ngIf="SignUpForm.get('password')?.errors && (SignUpForm.get('password')?.touched) || (SignUpForm.get('password')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+        <p *ngIf="SignUpForm.get('password')?.getError('required')"> Password is Required</p>
+        <p *ngIf="SignUpForm.get('password')?.getError('pattern')">It must be atleast 6 chars </p>
+        </div>
+
+        <input type="repassword" class="d-flex b mt-3 form-control " id="repassword" formControlName="repassword" placeholder="Re-write password">
+        <div *ngIf="SignUpForm.get('repassword')?.errors && (SignUpForm.get('repassword')?.touched) || (SignUpForm.get('repassword')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+        <p *ngIf="SignUpForm.get('repassword')?.getError('required')"> Password is Required</p>
+        <p *ngIf="SignUpForm.get('repassword')?.getError('pattern')">It must be atleast 6 chars </p>
+        </div>
+
+        <button class="btn mt-4 d-flex justify-content-center align-items-center ">Sign Up</button>
+        <!-- <p class="mt-5 ">Protected by reCAPTCHA & Google Privacy Policy.</p>     -->
+    </form>
+        
+    </div>

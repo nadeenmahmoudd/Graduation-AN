@@ -1,0 +1,18 @@
+
+<div class="d-flex justify-content-center ">
+    <form  (ngSubmit)="handelLoginForm()" [formGroup]="loginForm" class="h">
+        <!-- <label for="email">email</label> -->
+        <h4 >Login </h4>
+        <input type="email" class=" b d-flex form-control " id="email" formControlName="email" placeholder="Enter Your E-mail">
+        <div *ngIf="loginForm.get('email')?.errors && (loginForm.get('email')?.touched) || (loginForm.get('email')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+            <p *ngIf="loginForm.get('email')?.getError('required')" class=""> Email is required</p>
+            <p *ngIf="loginForm.get('email')?.getError('email')">Invalid Email</p>
+        </div>
+        <!-- <label for="password">password</label> -->
+        <input type="password" class="d-flex b mt-3 form-control " id="password" formControlName="password" placeholder="Enter Your Password">
+        <div *ngIf="loginForm.get('password')?.errors && (loginForm.get('password')?.touched) || (loginForm.get('password')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+        <p *ngIf="loginForm.get('password')?.getError('required')"> Password is Required</p>
+        <p *ngIf="loginForm.get('password')?.getError('pattern')">It must be atleast 6 chars </p>
+        </div>
+        </form>
+    </div>
