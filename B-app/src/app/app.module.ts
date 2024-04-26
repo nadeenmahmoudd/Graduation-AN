@@ -18,6 +18,8 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { NavbarBlankComponent } from './components/navbar-blank/navbar-blank.component';
 import { NavbarAuthComponent } from './components/navbar-auth/navbar-auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ServiceDetailsComponent } from './components/service-details/service-details.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BlankLayoutComponent,
     AuthLayoutComponent,
     NavbarBlankComponent,
-    NavbarAuthComponent
+    NavbarAuthComponent,
+    CategoriesComponent,
+    ServiceDetailsComponent,
   ],
   imports: [
     BrowserModule,

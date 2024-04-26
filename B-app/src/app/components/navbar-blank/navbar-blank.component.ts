@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar-blank.component.css']
 })
 export class NavbarBlankComponent {
-
+  signOut(){
+    localStorage.removeItem('_token')
+    // this._router.navigate(['/login'])
+  }
 }

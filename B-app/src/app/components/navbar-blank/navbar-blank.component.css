@@ -1,3 +1,20 @@
 .esm{
+    /* color:  #DCAEFD; */
+    color: blueviolet;
+ 
+}
+.span{
+    cursor: pointer;
+}
+.span:hover{
+    cursor: pointer;
     color:  #DCAEFD;
+    font-size: large;
+
+}
+.hi{
+    color:  #DCAEFD;
+}
+h3{
+    cursor: pointer;
 }

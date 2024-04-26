@@ -12,6 +12,8 @@ import { BlankLayoutComponent } from './layouts/blank-layout/blank-layout.compon
 import { authGuard } from './guards/auth.guard';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { ServiceDetailsComponent } from './components/service-details/service-details.component';
 
 const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path:"profiles" , component:ProfilesComponent} ,
   {path:"products" , component:ProductsComponent} ,
   {path:"services" , component:ServicesComponent} ,
+  {path:"categories" , component:CategoriesComponent},
+  {path:"serviceDetails",component:ServiceDetailsComponent},
 ]},
 {path:"",component:AuthLayoutComponent, children:[
   {path:"",redirectTo:'signup' , pathMatch:"full"},

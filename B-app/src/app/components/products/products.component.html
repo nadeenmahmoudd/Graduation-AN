@@ -1,1 +1,21 @@
-<p>products works!</p>
+    <section class="productList">
+        <div class="container">
+            <div class="list">
+                <div class="item" *ngFor="let image of images">
+                    <div class="card">
+                        <img [src]="image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="btn d-flex justify-content-center align-items-center mt-4 "(click)="addToCart()">
+                                <a >Add To Cart</a>
+                                <i class="fa-solid fa-cart-shopping text-light "></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div> 
+    </section>
+
+

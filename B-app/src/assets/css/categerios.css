@@ -1,0 +1,36 @@
+.browse{
+    width: 20%;
+}
+.browse-title{
+ margin-left:10px ;
+    color: #030303;
+    font-size: 24px;
+    font-family: "Roboto";
+    font-weight: 700;
+    line-height: 28px;
+}
+.dropdown{
+    margin-bottom: 12px;
+}
+
+.accordion{
+    /* outline: 10px red solid !important; */
+    border: none !important;
+    --bs-accordion-btn-focus-box-shadow:  none  !important;
+    
+
+    
+    --bs-accordion-btn-focus-border-color: none    !important; 
+    -bs-accordion-active-color: none    !important; 
+     --bs-accordion-active-bg: none    !important;
+
+   }
+   .accordion-item {
+       color: var(--bs-accordion-color);
+       background-color: var(--bs-accordion-bg);
+       border: 1px #fff solid !important;
+   }
+
+    .accor1 .accordion .accordion-item:focus{
+       box-shadow: none  !important ;
+   } 

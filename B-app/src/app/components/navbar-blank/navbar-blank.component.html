@@ -1,29 +1,8 @@
-<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
- -->
-
  <nav
     class="navbar navbar-expand-sm navbar-light bg-light fixed-top "
 >
-    <div class="container">
-        <h4 class="esm "> Esm el mashro3 el gamed</h4>
+    <div class="container"  >
+        <h3 class="esm" routerLink="/home">Business Consulting Hub </h3>
         <button
             class="navbar-toggler d-lg-none"
             type="button"
@@ -36,15 +15,21 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0 ">
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/home" routerLinkActive="text-success fw-bold ">Home</a>
+                    <a class="nav-link" routerLink="/home" routerLinkActive="hi fw-bold ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/cart" routerLinkActive="text-success fw-bold ">Cart</a>
+                    <a class="nav-link" routerLink="/cart" routerLinkActive="hi fw-bold ">Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/services" routerLinkActive="text-success fw-bold ">Services</a>
+                    <a class="nav-link" routerLink="/services" routerLinkActive="hi fw-bold ">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/categories" routerLinkActive="hi fw-bold ">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/products" routerLinkActive="hi fw-bold ">Products</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link" routerLink="/products" routerLinkActive="text-success fw-bold ">Products</a>
@@ -70,7 +55,7 @@
                     <i class="fab fa-tiktok"></i>
                 </li> -->
                 <li class="nav-item " >
-                   <span class="span"> Log Out</span>
+                   <span (click)="signOut()" class="span"> Log Out</span>
                 </li>
             </ul>
            

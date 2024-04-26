@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
 
 :root {
@@ -12,7 +11,10 @@
     /* --rating-color: #ffc908; */
 }
 
+body {
+    /* font-family: var(--font-family) !important; */
 
+}
 
 /* div{
     background-color: var(--main-color);
@@ -57,13 +59,11 @@ a:hover {
     font-size: 14px;
 }
 
-/* .main-text {
+.main-text {
     color: var(--text-color);
     font-weight: 600;
-} */
-.text-main {
-    color: var(--main-color);
 }
+
 .bg-main {
     background-color: var(--main-color) !important;
 }
