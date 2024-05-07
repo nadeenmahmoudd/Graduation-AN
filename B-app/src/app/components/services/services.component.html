@@ -1,2 +1,19 @@
-<p>services works!</p>
-<button class="btn bg-main  " routerLink="/serviceDetails"> hi ana button el 3amltne <b>NADEEN</b> el 3ebkaraia b-show details el service </button>
+<div class="row g-3 position-relative">
+  <div class="col-md-3" *ngFor="let one of all">
+   <div [routerLink]="['/serviceDetails/',one.id]">
+    <div class="product p-2">
+        <div class="align-content-center  ">
+            <span class="d-flex justify-content-center"><b>{{one.name}}</b></span> <br>
+        <span class="d-flex justify-content-center align-items-center ">
+            <img src="../../../assets/images/2png.jpg">
+        </span>
+        </div>
+        <!-- <span>{{one.description}}</span> -->
+    </div>
+
+   </div>
+  </div>
+</div>
+<div *ngIf="isLoading" class="position-absolute bg-black opacity-50 w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center ">
+    <i class="fa fa-spin fa-spinner text-main fa-2xl"></i>
+</div>

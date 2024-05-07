@@ -1,15 +1,4 @@
  <div  class="container">
-      <!-- <div class="first">
-        <div class="one">
-            <h1 clas="first_text">BUSINESS
-                SERVICEHUB</h1>
-              </div> 
-              
-              
-              <div>
-                <button class="firstbutt btn ">log in </button>
-              </div>
-    </div> -->
     <div class="second">
         <div class="imageupper">
 
@@ -35,7 +24,7 @@
         <div class="accordion accordion-flush main-color" id="accordionFlushExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              <button class="accordion-button collapsed fw-bold " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                 Our services explained
               </button>
             </h2>
@@ -82,7 +71,7 @@
           <div class="home-service-item-text">
             <h2 class="main-text">Your business is in safe hands</h2>
             <p class="secondary-text">We prioritize your business security, employing top-notch encryption methods to safeguard your data. Trust us for secure data storage and protection.</p>
-            <button class="try-now">Try Now</button>
+            <button class="try-now" [routerLink]="['/services']">Try Now</button>
           </div>
           
           
@@ -91,7 +80,7 @@
           <div id="serv-text2" class="home-service-item-text item2-text">
             <h2 class="main-text">Smart cost-cutting solutions</h2>
             <p class="secondary-text">Empower your business with cost-saving strategies and efficient operations. Let our tool analyze and optimize your workflows for maximum savings.</p>
-            <button class="try-now">Try Now</button>
+            <button class="try-now"  [routerLink]="['/services']">Try Now</button>
           </div>
           <img id="serv-img2" [src]="images[4]" alt="">
           

@@ -14,6 +14,7 @@ import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ServiceDetailsComponent } from './components/service-details/service-details.component';
+import { ProviderDetailsComponent } from './components/provider-details/provider-details.component';
 
 const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
@@ -25,7 +26,9 @@ const routes: Routes = [
   {path:"products" , component:ProductsComponent} ,
   {path:"services" , component:ServicesComponent} ,
   {path:"categories" , component:CategoriesComponent},
-  {path:"serviceDetails",component:ServiceDetailsComponent},
+  {path:"serviceDetails/:id",component:ServiceDetailsComponent},
+  {path:"providerDetails/:id",component:ProviderDetailsComponent},
+
 ]},
 {path:"",component:AuthLayoutComponent, children:[
   {path:"",redirectTo:'signup' , pathMatch:"full"},

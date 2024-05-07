@@ -21,4 +21,7 @@
     margin-left: 140px;
     color: white;
 }
+.btn:hover{
+    cursor: pointer;
+}
 

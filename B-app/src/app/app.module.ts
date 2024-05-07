@@ -20,6 +20,12 @@ import { NavbarAuthComponent } from './components/navbar-auth/navbar-auth.compon
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ServiceDetailsComponent } from './components/service-details/service-details.component';
+import { AuthServiceService } from './services/auth-service.service';
+import { ShowAllServicesService } from './services/show-all-services.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { ProviderDetailsComponent } from './components/provider-details/provider-details.component';
+import { TrimPipe } from './pipes/trim.pipe';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -39,14 +45,19 @@ import { ServiceDetailsComponent } from './components/service-details/service-de
     NavbarAuthComponent,
     CategoriesComponent,
     ServiceDetailsComponent,
+    ProviderDetailsComponent,
+    TrimPipe,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [AuthServiceService,ShowAllServicesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
