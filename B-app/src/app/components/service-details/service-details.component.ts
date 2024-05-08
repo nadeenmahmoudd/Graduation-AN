@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route } from '@angular/router';
+import { from, interval, switchMap } from 'rxjs';
 import { ServiceDetailsService } from 'src/app/services/service-details.service';
 import { ShowAllServicesService } from 'src/app/services/show-all-services.service';
+
 
 @Component({
   selector: 'app-service-details',
@@ -9,19 +11,23 @@ import { ShowAllServicesService } from 'src/app/services/show-all-services.servi
   styleUrls: ['./service-details.component.css']
 })
 export class ServiceDetailsComponent {
-constructor(private _serviceDetailsService:ServiceDetailsService,private _activatedRoute:ActivatedRoute ,private _showAllServicesService:ShowAllServicesService){}
+constructor(private _serviceDetailsService:ServiceDetailsService,private _activatedRoute:ActivatedRoute ,private _showAllServicesService:ShowAllServicesService ){}
 ngOnInit(){
   this._activatedRoute.paramMap.subscribe((res:any)=>{
     console.log(res.get('id'))
     this.id=res.get('id')
   })
-  this.getServiceDetails()
+  this.getServiceDetails(this.id)
   this.ShowAll()
+  this._activatedRoute.params.subscribe(params=>{
+    const serviceId= params['id'];
+    this.getServiceDetails(this.id)
+  })
 }
 id:any;
 providers:any;
 all:any;
-getServiceDetails(){
+getServiceDetails(id:any){
   this._serviceDetailsService.getServiceById(this.id).subscribe({
     next:(res)=>{
       console.log(res);
@@ -29,6 +35,7 @@ getServiceDetails(){
       
     }
   })
+  
 }
 ShowAll(){
   this._showAllServicesService.ShowAllServices().subscribe({ 
