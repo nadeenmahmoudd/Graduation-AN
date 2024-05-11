@@ -17,6 +17,7 @@ SignUpForm:FormGroup=new FormGroup({
   email:new FormControl("",[Validators.required , Validators.email]),
   // password: new FormControl("",[Validators.required ,Validators.pattern(/^\w{6,}$/)]),
   // repassword: new FormControl("",[Validators.required ,Validators.pattern(/^\w{6,}$/)]),
+
   password: new FormControl("",[Validators.required ]),
   confirmPassword: new FormControl("",[Validators.required]),
   address:new FormControl("",[Validators.required])
@@ -29,14 +30,14 @@ handelSignUpForm(){
   next:(res)=>{
     this.isLoading=false
     console.log(res);
-    if(res.message == "success")
+    // if(res.message == "success")
     this._router.navigate(['/login']);
   },
   error:(err)=>{
     this.isLoading=false
     console.log(err);
    
-    this.errorMsg=err.error.message
+    this.errorMsg=err.error
   }
  })
 }

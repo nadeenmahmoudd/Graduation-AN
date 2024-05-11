@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,6 +7,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-// image:string="assets/images/Home/step1.png"
-images:string[] =["assets/images/Home/step1.png","assets/images/Home/step2.png","assets/images/Home/step3.png"]
+constructor( private _cartService:CartService){}
+ngOnInit(){
+  this.ShowCart;
+}
+products:any
+ShowCart(){
+  this._cartService.getCart().subscribe({
+    next:(res)=>{
+      console.log(res);
+      this.products=res
+      },
+      error(err) {
+        console.log(err);
+        
+      },
+  })
+}
 }

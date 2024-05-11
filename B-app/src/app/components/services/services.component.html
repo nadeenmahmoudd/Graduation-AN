@@ -4,9 +4,13 @@
     <div class="product p-2">
         <div class="align-content-center  ">
             <span class="d-flex justify-content-center"><b>{{one.name}}</b></span> <br>
+            <span class="d-flex justify-content-center">{{one.description | biggerTrim}} 
+                <span *ngIf="one.description.split(' ').length >4">...</span>
+            </span> <br>
         <span class="d-flex justify-content-center align-items-center ">
             <img src="../../../assets/images/2png.jpg">
         </span>
+
         </div>
         <!-- <span>{{one.description}}</span> -->
     </div>

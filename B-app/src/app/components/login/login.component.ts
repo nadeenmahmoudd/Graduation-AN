@@ -26,19 +26,27 @@ handelLoginForm(){
   this.isLoading=true;
  this._authServiceService.signIn(this.loginForm.value).subscribe({
   next:(res)=>{
+    const token = res.token;
+    localStorage.setItem('token',token);
+    this._authServiceService.getToken()
+    if (token) {
+      sessionStorage.setItem('token', token);
+      this._authServiceService.getToken()
+    }
+      this._router.navigate(['/home']);
     this.isLoading=false;
     console.log(res);
     // if(res.message == "success"){
-    //   localStorage.setItem('_token',res.token)
+    //   localStorage.setItem('token',res.token)
     //   this._authServiceService.getToken()
     //   this._router.navigate(['/home']);
     // }
     
   },
   error:(err)=>{
-    console.log(err);
+    console.log(err.error);
     this.isLoading=false;
-    this.errorMsg=err.error.message
+    this.errorMsg=err.error
   }
  })
  

@@ -8,6 +8,6 @@ import { LoaderService } from 'src/app/services/loader.service';
   styleUrls: ['./loader.component.css']
 })
 export class LoaderComponent {
-constructor(private _loaderService:LoaderService){}
-isLoading: Subject<boolean> = this._loaderService.isLoading;
+constructor(private loaderService:LoaderService){}
+isLoading: Subject<boolean> = this.loaderService.isLoading;
 }

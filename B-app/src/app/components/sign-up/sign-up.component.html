@@ -14,13 +14,13 @@
             <p *ngIf="SignUpForm.get('email')?.getError('email')">Invalid Email</p>
         </div>
         <!-- <label for="password">password</label> -->
-        <input type="password" class="d-flex b mt-3 form-control " id="password" formControlName="password" placeholder="Enter Your Password">
+        <input type="text" class="d-flex b mt-3 form-control " id="password" formControlName="password" placeholder="Enter Your Password">
         <div *ngIf="SignUpForm.get('password')?.errors && (SignUpForm.get('password')?.touched) || (SignUpForm.get('password')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
         <p *ngIf="SignUpForm.get('password')?.getError('required')"> Password is Required</p>
         <!-- <p *ngIf="SignUpForm.get('password')?.getError('pattern')">It must be atleast 6 chars </p> -->
         </div>
 
-        <input type="password" class="d-flex b mt-3 form-control " id="confirmPassword" formControlName="confirmPassword" placeholder="Re-write password">
+        <input type="text" class="d-flex b mt-3 form-control " id="confirmPassword" formControlName="confirmPassword" placeholder="Re-write password">
         <div *ngIf="SignUpForm.get('confirmPassword')?.errors && (SignUpForm.get('confirmPassword')?.touched) || (SignUpForm.get('confirmPassword')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
         <p *ngIf="SignUpForm.get('confirmPassword')?.getError('required')"> Password is Required</p>
         <!-- <p *ngIf="SignUpForm.get('repassword')?.getError('pattern')">It must be atleast 6 chars </p> -->

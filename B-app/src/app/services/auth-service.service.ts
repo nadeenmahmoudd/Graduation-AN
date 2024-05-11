@@ -17,7 +17,12 @@ export class AuthServiceService {
     return this._httpClient.post(`http://bussinesshub.runasp.net/api/Account/api/Account/Registration`,userData)
   }
   getToken(){
-    const encode =localStorage.getItem('_token')
+    const enncode =localStorage.getItem('token')
+    if(enncode){
+      const decode = jwtDecode(enncode)
+      console.log(decode)
+    }
+    const encode =sessionStorage.getItem('token')
     if(encode){
       const decode = jwtDecode(encode)
       console.log(decode)

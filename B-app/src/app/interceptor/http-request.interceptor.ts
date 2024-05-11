@@ -12,14 +12,14 @@ import { finalize } from 'rxjs';
 @Injectable()
 export class HttpRequestInterceptor implements HttpInterceptor {
 
-  constructor(private _loaderService:LoaderService) {}
+  constructor(private loaderService:LoaderService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    this._loaderService.show();
+    this.loaderService.show();
     let newRequest = request.clone({
-      headers: request.headers.set("token", `${localStorage.getItem('_token')}`)
+      headers: request.headers.set("token", `${localStorage.getItem('token')}`)
     })
     return next.handle(newRequest).pipe(
-      finalize(() => this._loaderService.hide()),);
+      finalize(() => this.loaderService.hide()),);
   }
 }

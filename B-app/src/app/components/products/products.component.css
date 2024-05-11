@@ -9,17 +9,18 @@
 .productList .list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    
     /* flex-direction: row; */
     
 }
 .productList .list .item{
-    width: 15%;
+    width: 23%;
     /* justify-content: space-around; */
 
 }
 .productList .list .item .card{
-    width: 100%;
+    width: 85%;
     height: 250px;
     margin-bottom: 15px;
     border-radius: 20px;
@@ -32,6 +33,7 @@
 .productList .list .item .card img{
     /* position: relative; */
     width: 90%;
+    /* height: 100px; */
     height: 80% !important;
     margin: auto;
     border-top-left-radius: 20px !important;
@@ -41,6 +43,7 @@
 }
 .productList .list .item .card .card-body{
     width: 100%;
+    
 }
 .productList .list .item .card .btn{
     cursor: pointer;

@@ -1,12 +1,13 @@
     <section class="productList">
         <div class="container">
             <div class="list">
-                <div class="item" *ngFor="let image of images">
+                <div class="item" *ngFor="let oneProduct of allProducts">
                     <div class="card">
-                        <img [src]="image" class="card-img-top" alt="...">
+                        <img  [src]="oneProduct.imageUrl" class="card-img-top w-100  " alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <div class="btn d-flex justify-content-center align-items-center mt-4 "(click)="addToCart()">
+                            <h5 class="card-title">{{oneProduct.name | biggerTrim}}</h5>
+                            <p>{{oneProduct.price}}</p>
+                            <div class="btn d-flex justify-content-center align-items-center mt-4  "(click)="addToCart(oneProduct.id)">
                                 <a >Add To Cart</a>
                                 <i class="fa-solid fa-cart-shopping text-light "></i>
                             </div>
@@ -17,5 +18,3 @@
             </div>
         </div> 
     </section>
-
-

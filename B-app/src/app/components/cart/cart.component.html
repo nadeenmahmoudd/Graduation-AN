@@ -1,144 +1,119 @@
-    <div class="container-fluid ">
-        <div class="row d-flex" >
-            <div class="main">
-            <h1 class="main-text">BizServiceHub Cart</h1>
-            <table class="table">
-            <thead>
-                <tr>
-                   
-                    <th scope="col">product</th> 
-                      <th scope="col">Type</th>  
-                   
-                 
-                    <th scope="col">price total
-                        </th>
-                </tr>
-            </thead>
-            <tbody>
-               
-            
-                    <tr>
-                    
-                        <td>
-            <div class="row d-flex" >
+<div class="container-fluid">
+  <div class="row d-flex">
+    <div class="main">
+      <h1 class="main-text m-2">Cart</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">product</th>
+            <th scope="col">Quanity</th>
+
+            <th scope="col">price total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>
+              <div class="row d-flex">
                 <div class="cart-img">
-            
+                    <img [src]="product.imageUrl">
                 </div>
                 <div class="cart-descrption">
-            <h2>Dog bed &Blanekt</h2>
+                  <h2>{{product.name}}</h2>
                 </div>
-            </div>
-                        </td>
-            
-                        <td>  
-            
-                      <div class="quanity">
-                        <p>1</p>
-                      </div>
-            
-                        </td>
-                     
-            
-                    <td> 
-                        <div class="price">
-                            <p>$15</p>
-                          </div>
-            
-                         </td>
-                 </tr>
-                 <tr>
-                    
-                    <td>
-        <div class="row d-flex " >
-            <div class="cart-img">
-        
-            </div>
-            <div class="cart-descrption">
-        <h2>Dog bed &Blanekt</h2>
-            </div>
-        </div>
-                    </td>
-        
-                    <td>  
-        
-                  <div class="quanity">
-                    <p>1</p>
-                  </div>
-        
-                    </td>
-                 
-        
-                <td> 
-                    <div class="price">
-                        <p>$15</p>
-                      </div>
-        
-                     </td>
-             </tr>
-            
-            
-               
-            
-                
-            
-            
-                
-            
-            
-            </tbody>
-            </table>
-            
-            </div>
-            <div class="recit ">
-                <p>
-                    <i class="fa-solid fa-arrow-left"></i> checkout step
-                </p>
-                <h1>Payment Info</h1>
-                <h2>Payment Method</h2>
-                <div class="methods d-flex align-items-start   justify-content-between">
-                
-                        <div class="crdit_card">
-                            <button>Credit Card'</button>
-                        </div>
-                        <div class="paypal">
-                            <button>Pay Pal</button>
-                        </div>
-                   
-                   
+              </div>
+            </td>
+
+            <td>
+              <div class="quanity">
+                <p>{{product.quanity}}</p>
+              </div>
+            </td>
+
+            <td>
+              <div class="price">
+                <p>{{product.price}}</p>
+              </div>
+            </td>
+          </tr>
+          <!-- <tr>
+            <td>
+              <div class="row d-flex">
+                <div class="cart-img"></div>
+                <div class="cart-descrption">
+                  <h2>Dog bed &Blanekt</h2>
                 </div>
-                <div class="cardholder">
-                    <h2>Cardholder Name </h2>
-                    <input type="text" class="form-control">
-                </div>
-                <div class="cardholder">
-                    <h2>Card Number </h2>
-                    <input type="text" class="form-control">
-                </div>
-                  
-                  <div class="credit-card    ">
-                    <div class="labelss d-flex ">
-                        <div class="creditlabel">
-                            <label for="expiration-date">Expiration Date:</label>
-                        </div>
-                        <div class="cvvlabel">
-                            <label for="cvv">CVV:</label>
-                        </div>
-                    </div>
-                    <div class="inputts d-flex 
-                     ">
-                        <div class="month">
-                            <input type="text" id="expiration-date" placeholder="MM " maxlength="2">
-                        </div>
-                        <div class="year">
-                            <input type="text" id="expiration-date" placeholder=" YY" maxlength="2">
-                        </div>
-                        <div class="cvvCode">
-                            <input type="text" id="cvv" placeholder="CVV" maxlength="3">
-                        </div>
-                    </div>
-            </div>
-            <button class="Confirmbtn">Confirm & Pay $ 37.17</button>
-        </div>
-        </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="quanity">
+                <p>1</p>
+              </div>
+            </td>
+
+            <td>
+              <div class="price">
+                <p>$15</p>
+              </div>
+            </td>
+          </tr> -->
+        </tbody>
+      </table>
     </div>
-    
+    <div class="recit">
+      <p><i class="fa-solid fa-arrow-left"></i> checkout step</p>
+      <h1>Payment Info</h1>
+      <h2>Payment Method</h2>
+      <div class="methods d-flex align-items-start justify-content-between">
+        <div class="crdit_card">
+          <button>Credit Card'</button>
+        </div>
+        <div class="paypal">
+          <button>Pay Pal</button>
+        </div>
+      </div>
+      <div class="cardholder">
+        <h2>Cardholder Name</h2>
+        <input type="text" class="form-control" />
+      </div>
+      <div class="cardholder">
+        <h2>Card Number</h2>
+        <input type="text" class="form-control" />
+      </div>
+
+      <div class="credit-card">
+        <div class="labelss d-flex">
+          <div class="creditlabel">
+            <label for="expiration-date">Expiration Date:</label>
+          </div>
+          <div class="cvvlabel">
+            <label for="cvv">CVV:</label>
+          </div>
+        </div>
+        <div class="inputts d-flex">
+          <div class="month">
+            <input
+              type="text"
+              id="expiration-date"
+              placeholder="MM "
+              maxlength="2"
+            />
+          </div>
+          <div class="year">
+            <input
+              type="text"
+              id="expiration-date"
+              placeholder=" YY"
+              maxlength="2"
+            />
+          </div>
+          <div class="cvvCode">
+            <input type="text" id="cvv" placeholder="CVV" maxlength="3" />
+          </div>
+        </div>
+      </div>
+      <button class="Confirmbtn">Confirm & Pay $ 37.17</button>
+    </div>
+  </div>
+</div>
