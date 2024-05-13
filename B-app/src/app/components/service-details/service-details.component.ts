@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Route } from '@angular/router';
 import { from, interval, switchMap } from 'rxjs';
+import { Services } from 'src/app/interfaces/services';
 import { ServiceDetailsService } from 'src/app/services/service-details.service';
 import { ShowAllServicesService } from 'src/app/services/show-all-services.service';
 
@@ -25,15 +26,15 @@ ngOnInit(){
   })
 }
 id:any;
-providers:any;
-all:any;
-getServiceDetails(id:any){
+providers:Services[]=[];
+all:Services[]=[];
+getServiceDetails(id:number){
   this._serviceDetailsService.getServiceById(this.id).subscribe({
     next:(res)=>{
       console.log(res);
       this.providers=res;
-      
     }
+    
   })
   
 }

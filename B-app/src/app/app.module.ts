@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { LoginComponent } from './components/login/login.component';
@@ -27,7 +25,6 @@ import { LoaderComponent } from './components/loader/loader.component';
 import { BiggerTrimPipe } from './pipes/bigger-trim.pipe';
 import { HttpRequestInterceptor } from './interceptor/http-request.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
@@ -64,10 +61,11 @@ import { ToastrModule } from 'ngx-toastr';
 
   ],
   providers: [
-    //  {
-    //   provide: HTTP_INTERCEPTORS ,
-    //   useClass:  HttpRequestInterceptor,
-    //   multi:true,},
+     {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpRequestInterceptor,
+      multi: true
+     }
   ],
   bootstrap: [AppComponent]
 })

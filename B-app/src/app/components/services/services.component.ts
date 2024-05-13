@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AuthServiceService } from 'src/app/services/auth-service.service';
+import { Services } from 'src/app/interfaces/services';
 import { ShowAllServicesService } from 'src/app/services/show-all-services.service';
 
 @Component({
@@ -16,7 +16,7 @@ images:string[]=["assets/images/6png.jpg","assets/images/1png.jpg",
 "assets/images/8png.jpg","assets/images/9png.jpg",
 "assets/images/2png.jpg","assets/images/4png.jpg"] 
 isLoading:boolean=false;
-all: any[] | undefined
+all: Services[]=[]
 ngOnInit(){
   this.ShowAll()
 }

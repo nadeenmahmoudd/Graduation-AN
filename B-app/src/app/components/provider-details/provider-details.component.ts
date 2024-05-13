@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ProvidersDetails } from 'src/app/interfaces/providers-details';
+import { ProviderDetails } from 'src/app/interfaces/provider-details';
 import { ServiceDetailsService } from 'src/app/services/service-details.service';
 import { idText } from 'typescript';
 
@@ -19,8 +19,7 @@ ngOnInit(){
   this.showProviderById()
 }
 id:any;
-// providerDetails:ProvidersDetails[]=[]
-providerDetails:any
+providerDetails:ProviderDetails[] | any=[]
 showProviderById(){
   this._serviceDetailsService.getProviderById(this.id).subscribe({
     next:(res)=>{

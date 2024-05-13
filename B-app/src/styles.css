@@ -71,3 +71,14 @@ a:hover {
 .bg-main-light {
     background-color: var(--light-color) !important;
 }
+.btn{
+    background-color: #DCAEFD;
+    border-radius:20px ;
+    width: 200px;
+    height: 44px;
+    margin-left: 140px;
+    color: white;
+}
+.btn:hover{
+    cursor: pointer;
+}
