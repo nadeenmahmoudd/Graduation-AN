@@ -26,6 +26,14 @@ import { BiggerTrimPipe } from './pipes/bigger-trim.pipe';
 import { HttpRequestInterceptor } from './interceptor/http-request.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { Trim1Pipe } from './pipes/trim1.pipe';
+import { VendorLoginComponent } from './components/vendor-login/vendor-login.component';
+import { RequestsHomeComponent } from './components/requests-home/requests-home.component';
+import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
+import { NavbarVendorComponent } from './components/navbar-vendor/navbar-vendor.component';
+import { BookServiceFormComponent } from './components/book-service-form/book-service-form.component';
+import { FilterProductsPipe } from './pipes/filter-products.pipe';
 
 @NgModule({
   declarations: [
@@ -49,6 +57,14 @@ import { ToastrModule } from 'ngx-toastr';
     TrimPipe,
     LoaderComponent,
     BiggerTrimPipe,
+    CheckoutComponent,
+    Trim1Pipe,
+    VendorLoginComponent,
+    RequestsHomeComponent,
+    VendorLayoutComponent,
+    NavbarVendorComponent,
+    BookServiceFormComponent,
+    FilterProductsPipe,
   ],
   imports: [
     BrowserModule,

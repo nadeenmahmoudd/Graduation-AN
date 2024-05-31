@@ -13,5 +13,8 @@ export class NavbarBlankComponent {
     localStorage.removeItem('_token')
     sessionStorage.removeItem('token')
     this._router.navigate(['/login'])
+   
+      document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/user';
+    
   }
 }

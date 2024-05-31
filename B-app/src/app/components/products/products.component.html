@@ -1,16 +1,21 @@
     <section class="productList">
         <div class="container">
+            <input type="text" class="form-control my-3 w-50 mx-auto " [(ngModel)]="searchTerm" placeholder=" search..."> 
             <div class="list">
-                <div class="item" *ngFor="let oneProduct of allProducts">
+                <div class="item" *ngFor="let oneProduct of allProducts | filterProducts :searchTerm" [title]="oneProduct.name">
                     <div class="card">
-                        <img  [src]="oneProduct.imageUrl" class="card-img-top w-100  " alt="...">
+                        <img  [src]="oneProduct.imageUrl" class="card-img-top   " alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">{{oneProduct.name | biggerTrim}}</h5>
-                            <p>{{oneProduct.price}}</p>
-                            <div class="btn d-flex justify-content-center align-items-center mt-4  "(click)="addToCart(oneProduct.id)">
+                            <h5 class="card-title d-flex justify-content-center ">{{oneProduct.name | trim}}
+                                <span *ngIf="oneProduct.name.split(' ').length >2">...</span>
+                            </h5>
+                            <p class=" ">{{oneProduct.price }} EGP</p>
+                            <button class="btn d-flex justify-content-center align-items-center" (click)="addToCart(oneProduct.id)">Add to Cart  <i class="fa-solid fa-cart-shopping text-light "></i>
+                            </button>
+                            <!-- <div class="btn d-flex justify-content-center align-items-center mt-4  "(click)="addToCart(oneProduct.id)">
                                 <a >Add To Cart</a>
                                 <i class="fa-solid fa-cart-shopping text-light "></i>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

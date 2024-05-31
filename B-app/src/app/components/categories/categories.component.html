@@ -2,7 +2,7 @@
     <section class="Categories">
         <div class="container-fluid">
             <div class="content">
-                <div class="browse">
+                <!-- <div class="browse">
                     <h1 class="browse-title">
                         Browse 
                     </h1>
@@ -45,19 +45,25 @@
                           </div>
                         </div>
                       </div>
-                </div> <!-- browse -->
+                </div>  -->
 
                 
-                    <div class="categories-items">
-                        <div class="card catigories-item">
-                            <img [src]="images[0]" class="card-img-top" alt="...">
+                    <div class="categories-items" >
+                        <div class="card catigories-item" *ngFor="let category of categories" >
+                            <img [src]="category.imageUrl" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h4>Technology</h4>
+                                <h4>{{category.name}}</h4>
                             </div>
                         </div>
+                    <div class="card catigories-item">
+     <img src="assets/images/8png.jpg" class="card-img-top allProducts" alt="..." routerLink="/products">
+                     <div class="card-body">
+                      <h4>All products</h4>
+                  </div>
+                    </div>
+
                     
-                    
-                        <div class="card catigories-item">
+                        <!-- <div class="card catigories-item">
                             <img [src]="images[1]" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h4>Technology</h4>
@@ -79,7 +85,7 @@
                                 <h4>Technology</h4>
                             </div>
                         </div>
-                    
+                     -->
                 </div>
             </div>
         </div>

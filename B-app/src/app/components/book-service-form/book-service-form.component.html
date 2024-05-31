@@ -1,0 +1,45 @@
+<!-- <p>book-service-form works!</p> -->
+<div class="d-flex justify-content-center ">
+    <form  (ngSubmit)="handelBookingForm(providerId,code)" [formGroup]="BookingForm" class="h" *ngIf="isBooked; else booked">
+        <!-- <label for="email">email</label> -->
+        <!-- <h4 >Sign Up </h4> -->
+        <input type="text" class=" b d-flex form-control " id="name" formControlName="name" placeholder="Enter Your Name">
+        <div *ngIf="BookingForm.get('name')?.errors && (BookingForm.get('name')?.touched) || (BookingForm.get('name')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+            <p *ngIf="BookingForm.get('name')?.getError('required')" class=""> Name is required</p>
+        </div>
+        <input type="email" class=" b d-flex form-control mt-3" id="email" formControlName="email" placeholder="Enter Your E-mail">
+        <div *ngIf="BookingForm.get('email')?.errors && (BookingForm.get('email')?.touched) || (BookingForm.get('email')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+            <p *ngIf="BookingForm.get('email')?.getError('required')" class=""> Email is required</p>
+            <p *ngIf="BookingForm.get('email')?.getError('email')">Invalid Email</p>
+        </div>
+    
+        <input type="number" class="d-flex b mt-3 form-control " id="mobileNumber" formControlName="mobileNumber" placeholder="Enter Your mobileNumber">
+        <div *ngIf="BookingForm.get('mobileNumber')?.errors && (BookingForm.get('mobileNumber')?.touched) || (BookingForm.get('mobileNumber')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+        <p *ngIf="BookingForm.get('mobileNumber')?.getError('required')">    Mobile Number is Required</p>
+        </div>
+
+        <input type="text" class="d-flex b mt-3 form-control " id="address" formControlName="address" placeholder="Put Your Address">
+        <div *ngIf="BookingForm.get('address')?.errors && (BookingForm.get('address')?.touched) || (BookingForm.get('address')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+        <p *ngIf="BookingForm.get('address')?.getError('required')"> Address is Required</p>
+        </div>
+        <input type="text" class="d-flex b mt-3 form-control " id="code" name="code" [(ngModel)]="code" formControlName="code" placeholder="Put Your code">
+        <div *ngIf="BookingForm.get('code')?.errors && (BookingForm.get('code')?.touched) || (BookingForm.get('code')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+        <p *ngIf="BookingForm.get('code')?.getError('required')"> Discount Code is Required</p>
+        </div>
+
+        <button  [disabled]="BookingForm.invalid"class="btn mt-4 d-flex justify-content-center align-items-center " (click)="handelBookingForm(providerId,code)">Submit
+            <!-- <i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i> -->
+        </button>
+
+        <div class="alert  alert-danger b d-flex  mt-2  errorDiv" *ngIf="notbookedDiv">
+           <h5 class="elerror "> Error, Try again <img class="errorimg" src="../../../assets/images/false sign 1.jpeg"> </h5>
+        </div>
+        <!-- <p class="mt-5 ">Protected by reCAPTCHA & Google Privacy Policy.</p>     -->
+    </form>
+       <ng-template #booked>
+        <div class="text-success bookingsuccess" >
+           <h1 class="mt-5"> you have booked successfully!</h1>
+           <img src="../../../assets/images/greencheckk.png" class="greenCheck">
+        </div>
+       </ng-template>
+    </div>

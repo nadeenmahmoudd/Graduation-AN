@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .productList .container{
-    margin-top: 100px;
+    margin-top: 30px;
 }
 .productList .list{
     display: flex;
@@ -21,20 +21,25 @@
 }
 .productList .list .item .card{
     width: 85%;
-    height: 250px;
-    margin-bottom: 15px;
+    /* height: 250px; */
+    height: 75%;
+    /* margin-bottom: 15px; */
+    margin-bottom: 2%;
     border-radius: 20px;
     padding-bottom: 80px;
-    padding-top:10px;
+    /* padding-top:10px; */
     box-shadow: var(--shadow);
     border: none !important;
 
 }
+.form-control{
+    height: 40px;
+}
 .productList .list .item .card img{
     /* position: relative; */
     width: 90%;
-    /* height: 100px; */
-    height: 80% !important;
+   height:140px ;
+    /* height: 100% !important; */
     margin: auto;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;

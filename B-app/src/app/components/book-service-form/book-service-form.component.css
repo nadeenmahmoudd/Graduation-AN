@@ -1,0 +1,41 @@
+.h{
+    margin-top: 40px;
+    width: 50%;
+    align-items: center;
+    
+}
+.greenCheck{
+    margin-left: 35%
+}
+.elerror{
+    margin-left:30%;
+}
+.errorimg{
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+.bookingsuccess{
+    margin-top: 100px;
+}
+.b{
+    height: 50px;
+    border-radius: 10px;
+    width: 500px; 
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+}
+.new{
+    color:grey ;
+}
+.btn{
+    background-color: #DCAEFD;
+    border-radius:10px ;
+    width: 200px;
+    height: 44px;
+    margin-left: 140px;
+    color: white;
+}
+.btn:hover{
+    cursor: pointer;
+}
+

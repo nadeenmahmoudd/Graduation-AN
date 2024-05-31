@@ -27,13 +27,14 @@ handelLoginForm(){
  this._authServiceService.signIn(this.loginForm.value).subscribe({
   next:(res)=>{
     const token = res.token;
+    document.cookie = `token=${encodeURIComponent(token)}; path=/User;secure; httponly";`
     localStorage.setItem('token',token);
     this._authServiceService.getToken()
     if (token) {
       sessionStorage.setItem('token', token);
       this._authServiceService.getToken()
     }
-      this._router.navigate(['/home']);
+    this._router.navigate(['/home']);
     this.isLoading=false;
     console.log(res);
     // if(res.message == "success"){
@@ -51,4 +52,11 @@ handelLoginForm(){
  })
  
 }
+// setToken(token: string) {
+//   document.cookie = `token=${encodeURIComponent(token)}; path=/user;`
+// }
+
+
+
+
 }

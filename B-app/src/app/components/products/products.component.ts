@@ -5,7 +5,6 @@ import {Products} from 'src/app/interfaces/products';
 import { CartService } from 'src/app/services/cart.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { TestjwtService } from 'src/app/services/testjwt.service';
 
 @Component({
   selector: 'app-products',
@@ -16,8 +15,9 @@ import { TestjwtService } from 'src/app/services/testjwt.service';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent {
-constructor( private _productsService:ProductsService , private _cartService:CartService,private toastr: ToastrService ,
-   private _httpClient :HttpClient , private _testjwtService:TestjwtService){
+constructor( private _productsService:ProductsService , private _cartService:CartService,
+  private toastr: ToastrService ,
+   private _httpClient :HttpClient ){
 }
 
 ngOnInit(){
@@ -27,6 +27,7 @@ ngOnInit(){
   // console.log('User ID:', userId);
 }
 allProducts:Products[]=[]
+searchTerm:string="";
 showProducts(){
   this._productsService.getAllProducts().subscribe({
     next:(res)=>{
@@ -47,8 +48,8 @@ this._cartService.addToCart(productId ).subscribe({
   },
   error:(err)=>{
     console.log(err);
-    this.toastr.error(err.error, 'Error');
-    console.log(productId);
+    this.toastr.error(err.error , 'Error' );
+    // console.log(err.error);
    
     
   }

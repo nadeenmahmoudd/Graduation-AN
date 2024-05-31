@@ -1,10 +1,13 @@
-<div class="mt-4 bg-light product p-2 ">
+
+
+<div class="mt-4 bg-light product p-3 ">
   <h2 class="d-flex justify-content-center align-items-center ">  {{ providerDetails.name }} <img [src]="providerDetails.imageUrl" /></h2>
 
  <h6 class="text-info d-block d-flex justify-content-center align-items-center">{{ providerDetails.email }}</h6>
- <h3 >About The Company :</h3>
+ <h5 >About The Company :</h5> <br>
     <p class="d-flex justify-content-center align-items-center" >  {{providerDetails.description}}</p>
-    <h3>The Company's Address  :</h3>
+    <h5>The Company's Address  :</h5> <br>
     {{providerDetails.address}}
 </div>
-<button class="btn mt-2 d-flex justify-content-center align-items-center fw-bold ">Book a Service</button>
+
+<button class="btn mt-2 d-flex justify-content-center align-items-center fw-bold " [routerLink]="['/bookingForm' ,providerDetails.id]">Book a Service</button>

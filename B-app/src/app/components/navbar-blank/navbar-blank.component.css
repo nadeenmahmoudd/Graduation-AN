@@ -1,10 +1,16 @@
 .esm{
     /* color:  #DCAEFD; */
     color: blueviolet;
+    margin-left: 5px;
  
 }
 .span{
     cursor: pointer;
+}
+.handshake{
+   width: 4%;
+   height: 4%;
+   border-radius: 50%;
 }
 .span:hover{
     cursor: pointer;
@@ -12,9 +18,18 @@
     font-size: large;
 
 }
+.navbarGeded{
+    margin-left: 5%;
+}
+.nav-item a:hover{
+    color:#DCAEFD;
+}
 .hi{
     color:  #DCAEFD;
 }
 h3{
     cursor: pointer;
 }
+/* .nav-item{
+    margin-left: 30px
+} */

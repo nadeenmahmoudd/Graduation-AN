@@ -1,0 +1,156 @@
+.recit{
+    /* top: 232px; */
+  /* left: 936px; */
+  /* width: 40%; */
+  width: 60%;
+  margin-left: 20%;
+  /* width: 100px; */
+  /* height: 684px; */
+  margin-top: 30px;
+  height: 80%;
+  background-color: #cc9afd44;
+  border-radius: 24px;
+  /* padding-top: 38px; */
+  /* padding-left: 35px;
+  margin-left: 340px; */
+}
+.button{
+    background-color:#ffffff;
+    color: #1d1d1d;
+    border-radius:10px ;
+}
+.button:hover{
+    background-color:#cb9afd;
+    color: white;
+    border-color: gray;
+}
+.form-control{
+    height: 50px;
+    border-radius: 10px;
+    width: 500px; 
+}
+.recit h1{
+    color: #ffffff;
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 40px;   
+    padding-bottom: 35px;
+}
+
+
+.recit h2{
+    color: #ffffff;
+    font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 18px; 
+  margin-bottom: 18px;
+}
+
+
+.recit p{
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Montserrat";
+    line-height: 18px;
+}
+.recit p i{
+   margin-right: 8px;
+}
+.recit input{
+    /* background-color: #cb9afd;
+    border: #cb9afd solid; */
+    height: 50px;
+    border-radius: 10px;
+    width: 500px; 
+}
+.crdit_card{
+    width: 32%;
+}
+.methods{
+margin: auto;
+/* width: 85%; */
+padding-right: 140px;
+padding-bottom: 20px;
+/* margin-right: 1700px; */
+border-bottom: 0.4px  solid  #ffffff;
+
+
+}
+.cardholder{
+    padding-top: 18px;
+    padding-bottom: 20px;
+    /* margin-right: 1700px; */
+    border-bottom: 0.4px  solid  #ffffff;  
+}
+/* .form-control{
+    background-color: #cb9afd !important;
+    color: #ffffff !important;
+} */
+.methods button{
+    cursor: pointer;
+    top: 422px;
+    left: 984px;
+    width: 136px;
+    height: 50px;
+    padding: 0px 8px;
+    border: 1px solid #1d1d1d;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #1d1d1d;
+    font-size: 14px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 18px;
+    outline: none;  
+}
+
+.paypal{
+    width: 32%;
+ 
+}
+
+.credit-card {
+    padding-right: 10px;
+    color: #ffffff;
+    margin-bottom: 18px;
+}
+.cvvlabel{
+    margin-left: 108px;
+}
+.credit-card  input{
+   width: 96px !important; 
+   color: #ffffff !important;
+}
+.credit-card  input::placeholder{
+  
+    color: #ffffff !important;
+ }
+.inputts{
+    padding-top: 10px;
+}
+
+.inputts div{
+    border-bottom: 0.4px  solid  #ffffff;  
+    margin-left:8px ;
+}
+.Confirmbtn{
+    cursor: pointer;
+    top: 826px;
+    left: 976px;
+    width: 328px;
+    height: 50px;
+    padding: 0px 8px;
+    border: 1px solid #1d1d1d;
+    box-sizing: border-box;
+    border-radius: 24px;
+    background-color: #ffffff;
+    color: #1d1d1d;
+    font-size: 18px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 24px;
+    outline: none;
+} 

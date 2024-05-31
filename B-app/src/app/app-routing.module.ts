@@ -15,6 +15,11 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { ServiceDetailsComponent } from './components/service-details/service-details.component';
 import { ProviderDetailsComponent } from './components/provider-details/provider-details.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { RequestsHomeComponent } from './components/requests-home/requests-home.component';
+import { VendorLoginComponent } from './components/vendor-login/vendor-login.component';
+import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
+import { BookServiceFormComponent } from './components/book-service-form/book-service-form.component';
 
 const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
@@ -28,12 +33,20 @@ const routes: Routes = [
   {path:"categories" , component:CategoriesComponent},
   {path:"serviceDetails/:id",component:ServiceDetailsComponent},
   {path:"providerDetails/:id",component:ProviderDetailsComponent},
+  {path:"checkout" , component:CheckoutComponent},
+  {path:"bookingForm/:id" , component:BookServiceFormComponent}
+ 
 
 ]},
 {path:"",component:AuthLayoutComponent, children:[
   {path:"",redirectTo:'signup' , pathMatch:"full"},
   {path:"login",component:LoginComponent},
   {path:"signup" , component:SignUpComponent} ,  
+  {path:"vendor-login",component:VendorLoginComponent}
+]},
+{path:"",component:VendorLayoutComponent, children:[
+  // {path:"",redirectTo:'signup' , pathMatch:"full"},
+  {path:"request-home" , component:RequestsHomeComponent},
 ]},
 
 {path:'**',component:NotfoundComponent},

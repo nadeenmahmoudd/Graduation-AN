@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.allProducts{
+    cursor: pointer;
+}
 .Categories .content{
     display: flex;
     margin-top: 50px;
@@ -72,6 +75,7 @@
     border: none !important;
     display: flex;
     flex-direction: column;
+
 }
 .card-body{
     width: 90%;
@@ -104,4 +108,5 @@
     border-top-right-radius: 20px !important;
     border-end-end-radius: 20px !important;
     border-end-start-radius: 20px !important;
+    cursor: pointer;
 }

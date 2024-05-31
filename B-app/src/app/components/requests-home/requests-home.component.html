@@ -1,0 +1,9 @@
+<div class="container">
+    <h3 class="mt-2  ">Welcome , Here are your orders :</h3>
+    <div *ngFor="let session of sessions">
+  <div class="bg-light mt-2 ">
+    {{session.userName}}
+    {{session.enrollmentCode}}
+  </div>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 <div class="row g-3 position-relative">
-  <div class="col-md-3" *ngFor="let one of all">
+  <div class="col-md-3" *ngFor="let one of all" [title]="one.description">
    <div [routerLink]="['/serviceDetails/',one.id]">
     <div class="product p-2">
         <div class="align-content-center  ">
@@ -9,6 +9,7 @@
             </span> <br>
         <span class="d-flex justify-content-center align-items-center ">
             <img src="../../../assets/images/2png.jpg">
+            <img [src]="one.imageUrl">
         </span>
 
         </div>

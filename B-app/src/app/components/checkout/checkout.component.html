@@ -1,0 +1,83 @@
+<div class="recit p-5 ">
+    <p><i class="fa-solid fa-arrow-left"></i> checkout step</p>
+    <!-- <h1>Payment Info</h1>
+    <h2>Payment Method</h2>
+    <div class="methods d-flex align-items-start justify-content-between">
+      <div class="crdit_card">
+        <button>Credit Card'</button>
+      </div>
+      <div class="paypal">
+        <button>Pay Pal</button>
+      </div>
+    </div>
+    <div class="cardholder">
+      <h2>Cardholder Name</h2>
+      <input type="text" class="form-control" />
+    </div>
+    <div class="cardholder">
+      <h2>Card Number</h2>
+      <input type="text" class="form-control" />
+    </div>
+
+    <div class="credit-card">
+      <div class="labelss d-flex">
+        <div class="creditlabel">
+          <label for="expiration-date">Expiration Date:</label>
+        </div>
+        <div class="cvvlabel">
+          <label for="cvv">CVV:</label>
+        </div>
+      </div>
+      <div class="inputts d-flex">
+        <div class="month">
+          <input
+            type="text"
+            id="expiration-date"
+            placeholder="MM "
+            maxlength="2"
+          />
+        </div>
+        <div class="year">
+          <input
+            type="text"
+            id="expiration-date"
+            placeholder=" YY"
+            maxlength="2"
+          />
+        </div>
+        <div class="cvvCode">
+          <input type="text" id="cvv" placeholder="CVV" maxlength="3" />
+        </div>
+      </div>
+    </div>
+    <button class="Confirmbtn">Confirm & Pay $ 37.17</button> -->
+    <form  (ngSubmit)="handelOrderForm()" [formGroup]="orderForm" class="h" >
+      <input type="text" class=" b d-flex form-control " id="name" formControlName="name" placeholder="Enter Your Name">
+      <div *ngIf="orderForm.get('name')?.errors && (orderForm.get('name')?.touched) || (orderForm.get('name')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+          <p *ngIf="orderForm.get('name')?.getError('required')" class=""> Name is required</p>
+      </div>
+      <input type="email" class=" b d-flex form-control mt-3" id="email" formControlName="email" placeholder="Enter Your E-mail">
+      <div *ngIf="orderForm.get('email')?.errors && (orderForm.get('email')?.touched) || (orderForm.get('email')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+          <p *ngIf="orderForm.get('email')?.getError('required')" class=""> Email is required</p>
+          <p *ngIf="orderForm.get('email')?.getError('email')">Invalid Email</p>
+      </div>
+  
+      <input type="number" class="d-flex b mt-3 form-control " id="mobileNumber" formControlName="mobileNumber" placeholder="Enter Your Phone number">
+      <div *ngIf="orderForm.get('mobileNumber')?.errors && (orderForm.get('mobileNumber')?.touched) || (orderForm.get('mobileNumber')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+      <p *ngIf="orderForm.get('mobileNumber')?.getError('required')">    Mobile Number is Required</p>
+      </div>
+
+      <input type="text" class="d-flex b mt-3 form-control " id="address" formControlName="address" placeholder="Put Your Address">
+      <div *ngIf="orderForm.get('address')?.errors && (orderForm.get('address')?.touched) || (orderForm.get('address')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+      <p *ngIf="orderForm.get('address')?.getError('required')"> Address is Required</p>
+      </div>
+      <!-- <input type="text" class="d-flex b mt-3 form-control " id="code" name="code" [(ngModel)]="code" formControlName="code" placeholder="Put Your code">
+      <div *ngIf="BookingForm.get('code')?.errors && (BookingForm.get('code')?.touched) || (BookingForm.get('code')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+      <p *ngIf="BookingForm.get('code')?.getError('required')"> Discount Code is Required</p>
+      </div> -->
+
+      <button  [disabled]=""class="btn button mt-4 d-flex justify-content-center align-items-center">Submit
+          <!-- <i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i> -->
+      </button>
+  </form>
+  </div>

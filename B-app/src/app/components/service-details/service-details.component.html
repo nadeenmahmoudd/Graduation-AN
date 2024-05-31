@@ -9,27 +9,29 @@
         </div>
 </div>
     </div> -->
-
 <div class="container">
   <section id="web-service" class="service">
     <div class="service-slider">
-      <div class="service-item" *ngFor="let one of all">
+      <div class="service-item" *ngFor="let one of all " [title]="one.name">
         <div [routerLink]="['/serviceDetails/', one.id]">
           <div class="service-item-content">
-            <h2 class="service-item-title mt-3" routerLinkActive="text-main fw-bold">{{ one.name }}</h2>
+            <h2 class="service-item-title mt-3" routerLinkActive="text-main fw-bold">{{ one.name |trim1}}
+              <span *ngIf="one.name.split(' ').length >1">...</span>
+            </h2>
             <!-- <p class="service-item-p">{{one.description}}</p> -->
-            <button class="service-item-btn mt-4 ">View Details</button>
+            <button class="service-item-btn mt-5 ">View Details</button>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   </section>
   <div class="one">
+    <input type="text" class="form-control my-3 w-50 mx-auto " [(ngModel)]="searchTerm" placeholder=" search..."> 
+
     <h1 class="servic-title">Service Providers</h1>
     <!-- <h6 class="servic-num"> 9 providers </h6> -->
   </div>
-
-  <div *ngFor="let provider of providers">
+  <div *ngFor="let provider of providers | filterProducts :searchTerm" [title]="provider.name">
     <div class="two">
       <div class="div-service-img">
         <img class="w-100 " [src]="provider.imageUrl" />
@@ -40,13 +42,16 @@
         </h2>
         <h6 class="Service-Provider-Role">Service Provider Role</h6>
       </div>
-
+      
       <div class="service-location">
-        <!-- <h6 class="Service-Provider-location">{{provider.address}}</h6> -->
-        <h6 class="Service-Provider-location">Location: City, Country</h6>
+        <h6 class="Service-Provider-location d-flex justify-content-center align-items-center "> 
+         {{provider.address |trim}}</h6>
+        <h6 class="Service-Provider-location">Location: City, Country</h6> 
       </div>
       <div class="service-button" [routerLink]="['/providerDetails/',provider.id]" >
-        <button class="Service-Provider-button">Explore Services</button>
+        <!-- <button class="Service-Provider-button">Explore Services</button> -->
+        <button class="Service-Provider-button">Explore Company</button>
+
       </div>
     </div>
   </div>
