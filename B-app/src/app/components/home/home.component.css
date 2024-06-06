@@ -1,6 +1,10 @@
-/* body{ */
-    /* overflow-x: hidden; */
-/* } */
+/* .sectionMain{
+    background-image: url("../../../assets/images/purpleBG.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-position: center center;
+} */
 .accor1 .accordion .accordion-item .accordion-body{
     display: flex;
     width: 100%;

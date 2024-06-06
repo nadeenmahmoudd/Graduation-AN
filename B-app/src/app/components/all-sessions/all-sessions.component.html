@@ -1,0 +1,23 @@
+<!-- <p>all-sessions works!</p>
+<div *ngFor="let booking of userBookings">
+    <div>Booking ID: {{ booking.id }}</div>
+    <div>User ID: {{ booking.userId }}</div>
+    <div>Provider ID: {{ booking.provider.id }}</div>
+    <div>Provider Name: {{ booking.provider.name }}</div>
+    <div>Enrollment Code: {{ booking.enrollmentCode }}</div>
+  </div> -->
+  <div class="bg-light p-5 mt-2 w-75 bigContainer ">
+    <div *ngFor="let booking of userBookings">
+      <div class="row align-items-center  ">       
+        <img style="width: 100px;" class="h-100 imageOfCompany " [src]="booking.provider.imageUrl">
+         {{ booking.provider.name  }} 
+          </div>
+          <div class="mt-3">
+           <p class="text-main "> Company's e-mail : {{booking.provider.email}} </p>
+           <p class="">  Company's number : {{booking.provider.phone}}</p> 
+           <p class=" "> Company's address : {{booking.provider.address}} </p>
+           <p> Your enrollment Code: <b>{{ booking.enrollmentCode }}</b></p>
+          </div>
+      <hr>
+    </div>
+  </div>

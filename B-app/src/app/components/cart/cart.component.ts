@@ -22,26 +22,19 @@ ngOnInit(){
       this.removeItem(this.id)
 })
 }
-  id?:any;
+
+  id:any;
+  count!:number ;
+ totalPrice!:number;
 products:Products[] | any[]=[]
 isCartEmpty: boolean = true;
-// ShowCart(){
-//   this._cartService.getCart().subscribe({
-//     next:(res)=>{
-//       console.log(res);
-//       this.products=res
-//       },
-//       error(err) {
-//         console.log(err);
-        
-//       },
-//   })
-// }
 showUserCart(){
   this._cartService.getUserCart().subscribe({
     next:(res)=>{
       console.log(res);
-      this.products=res
+      this.products=res.list
+     this.totalPrice=res.totalPrice
+      this.count=res.usercart1
       this.isCartEmpty = this.products.length === 0;
     },
     error:(err)=>{
@@ -69,7 +62,8 @@ updateCart(id:number , quantity:number){
    this._cartService.updateCartProductQuantity(id,quantity).subscribe({
      next:(res)=>{
  console.log(res);
- this.products=res // de 3ashan nekhale el cart tesawy el cart el gededa bel taghyrat el feha
+ this.products=res.list // de 3ashan nekhale el cart tesawy el cart el gededa bel taghyrat el feha
+ this.totalPrice=res.totalPrice 
      },
      error:(err)=>{
  console.log(err);

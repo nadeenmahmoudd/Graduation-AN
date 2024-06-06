@@ -3,7 +3,12 @@
   <img src="../../../assets/images/empty Cart.jpg" class=" d-flex justify-content-center align-items-center w-50 emptycart ">
 </div>
 <ng-template #notEmpty>
+  
 <div class="container-fluid">
+  <div class="d-flex justify-content-between total  m-3">
+    <h3 class="spanaya"> Number of Items :<span class=" text-main"> {{count}}</span></h3>
+    <h3> Total price : <span class=" text-main">{{totalPrice}} </span></h3>
+  </div>  
   <div class="row d-flex">
     <div class="main">
       <h1 class="main-text m-2">Cart</h1>
@@ -16,9 +21,9 @@
             <th scope="col" class="thPrice">Price </th>
           </tr>
         </thead>
-        <tbody>
-          <!-- <tr *ngFor="let product of products" [title]="product.product.name"> -->
+        <tbody>   
             <tr *ngFor="let product of products" [title]="product.product.name">
+              
             <td>
               <div class="row d-flex ">
                 <div class="cart-img">
@@ -31,10 +36,7 @@
 
 
               <div class="cart-descrption  ">
-                
        <br>
-              
-            
               </div>
               <span class="text-danger remove d-inline " (click)="removeItem(product.id)" >
                 <i class="fa fa-trash "></i>
@@ -68,7 +70,7 @@
 <button class="btn  checkoutbtn"
           routerLink="/checkout"> CheckOut 
         </button>
-         
+
 </ng-template>
 
 

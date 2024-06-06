@@ -24,6 +24,9 @@
     /* background-color: #272b30; */
 
 }
+.search{
+    border-radius: 15px;
+}
 .form-control{
     height: 40px;
 }

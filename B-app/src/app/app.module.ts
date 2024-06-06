@@ -34,6 +34,8 @@ import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.com
 import { NavbarVendorComponent } from './components/navbar-vendor/navbar-vendor.component';
 import { BookServiceFormComponent } from './components/book-service-form/book-service-form.component';
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
+import { AllOrdersComponent } from './components/all-orders/all-orders.component';
+import { AllSessionsComponent } from './components/all-sessions/all-sessions.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +67,8 @@ import { FilterProductsPipe } from './pipes/filter-products.pipe';
     NavbarVendorComponent,
     BookServiceFormComponent,
     FilterProductsPipe,
+    AllOrdersComponent,
+    AllSessionsComponent,
   ],
   imports: [
     BrowserModule,

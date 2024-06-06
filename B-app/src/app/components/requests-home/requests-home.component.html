@@ -1,9 +1,25 @@
-<div class="container">
+<div *ngIf="isEmpty; else notEmpty">
+  <h3 class="d-flex justify-content-center align-items-center mt-2  ">There is No Sessions </h3>
+  <!-- <img src="../../../assets/images/empty Cart.jpg" class=" d-flex justify-content-center align-items-center w-50 emptycart "> -->
+</div>
+<ng-template #notEmpty>
+<!-- <div class="container">
     <h3 class="mt-2  ">Welcome , Here are your orders :</h3>
     <div *ngFor="let session of sessions">
   <div class="bg-light mt-2 ">
+    <div></div>
     {{session.userName}}
     {{session.enrollmentCode}}
   </div>
     </div>
+</div> -->
+<div class="bg-light p-5 mt-2 w-75 bigContainer ">
+  <div *ngFor="let session of sessions">
+    <div class="row align-items-center d-flex justify-content-center  ">       
+      <div ><b class="text-main">User Name:</b> {{ session.userName }}</div>
+      <div><b>Enrollment Code :</b> {{session.enrollmentCode}}</div>
+        </div>
+    <hr>
+  </div>
 </div>
+</ng-template>

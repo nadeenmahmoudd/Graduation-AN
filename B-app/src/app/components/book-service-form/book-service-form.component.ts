@@ -7,7 +7,7 @@ import { ServiceDetailsService } from 'src/app/services/service-details.service'
 @Component({
   selector: 'app-book-service-form',
   templateUrl: './book-service-form.component.html',
-  styleUrls: ['./book-service-form.component.css']
+  styleUrls: ['./book-service-form.component.css' ]
 })
 export class BookServiceFormComponent {
 constructor( private _bookingService:BookingService , private _serviceDetailsService:ServiceDetailsService,
@@ -17,7 +17,9 @@ constructor( private _bookingService:BookingService , private _serviceDetailsSer
     this.providerId=res.get('id')
   })
 }
-code?:string;
+code: string="";
+discountCode:string=""
+
 providerId:any;
  isBooked:boolean=true;
  notbookedDiv:boolean=false;
@@ -42,5 +44,17 @@ this._bookingService.bookSession(providerId,code).subscribe({
     
   }
 })
+}
+generateDiscountCode(){
+  this._bookingService.getDiscountCode().subscribe({
+    next:(res)=>{
+      console.log(res);
+this.code=res.bookingCode
+    },
+    error:(err)=>{
+      console.log(err);
+      
+    }
+  })
 }
 }

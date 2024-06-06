@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class NavbarVendorComponent {
   constructor(private _router:Router){}
   signOut(){
-    localStorage.removeItem('__token')
+    localStorage.removeItem('token');
     this._router.navigate(['/login'])
   }
 }

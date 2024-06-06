@@ -22,11 +22,11 @@
         <div *ngIf="BookingForm.get('address')?.errors && (BookingForm.get('address')?.touched) || (BookingForm.get('address')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
         <p *ngIf="BookingForm.get('address')?.getError('required')"> Address is Required</p>
         </div>
-        <input type="text" class="d-flex b mt-3 form-control " id="code" name="code" [(ngModel)]="code" formControlName="code" placeholder="Put Your code">
+        <input type="text" class="d-flex b mt-3 form-control " id="code" name="code" [(ngModel)]="code" formControlName="code" placeholder="Put Your code">  
         <div *ngIf="BookingForm.get('code')?.errors && (BookingForm.get('code')?.touched) || (BookingForm.get('code')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
         <p *ngIf="BookingForm.get('code')?.getError('required')"> Discount Code is Required</p>
         </div>
-
+        <a (click)="generateDiscountCode()" class="d-flex discount mt-2"> Generate code</a>
         <button  [disabled]="BookingForm.invalid"class="btn mt-4 d-flex justify-content-center align-items-center " (click)="handelBookingForm(providerId,code)">Submit
             <!-- <i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i> -->
         </button>
@@ -34,7 +34,6 @@
         <div class="alert  alert-danger b d-flex  mt-2  errorDiv" *ngIf="notbookedDiv">
            <h5 class="elerror "> Error, Try again <img class="errorimg" src="../../../assets/images/false sign 1.jpeg"> </h5>
         </div>
-        <!-- <p class="mt-5 ">Protected by reCAPTCHA & Google Privacy Policy.</p>     -->
     </form>
        <ng-template #booked>
         <div class="text-success bookingsuccess" >

@@ -1,8 +1,9 @@
-.esm{
-    color: #DCAEFD;
+.esm {
+    color: #DCAEFD ;
 }
 .esm-gded{
-    color: blueviolet;
+    /* color: blueviolet; */
+    color:#DCAEFD;
 }
 .handshake{
     width: 4%;

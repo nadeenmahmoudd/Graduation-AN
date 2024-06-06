@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { BookingService } from 'src/app/services/booking.service';
 
 @Component({
   selector: 'app-checkout',
@@ -7,14 +8,25 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent {
+  constructor(private _bookingService:BookingService){}
   orderForm:FormGroup=new FormGroup({
-    name:new FormControl("",[Validators.required]),
-    email:new FormControl("",[Validators.required , Validators.email]),
-    mobileNumber: new FormControl("",[Validators.required ]),
+    secNum: new FormControl("",[Validators.required ]),
     address:new FormControl("",[Validators.required]),
 })
-handelOrderForm(){
-
+secNum!:number;
+address:string=""
+isOrdered:boolean=true;
+handelOrderForm(secNum:number , address:string){
+this._bookingService.checkOutSession( secNum , address).subscribe({
+  next:(res)=>{
+    console.log(res);
+    this.isOrdered=false;
+  },
+  error:(err)=>{
+    console.log(err);
+    
+  }
+})
 }
 }
 

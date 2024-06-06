@@ -25,6 +25,7 @@ ngOnInit(){
     this.getServiceDetails(this.id)
   })
 }
+searchTerm:string="";
 id:any;
 providers:Services[]=[];
 all:Services[]=[];

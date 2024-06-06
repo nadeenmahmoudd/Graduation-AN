@@ -1,21 +1,21 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { jwtDecode } from 'jwt-decode';
-import { Observable, catchError, throwError } from 'rxjs';
+import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-
-  constructor(private _httpClient:HttpClient) { }
-// getCart():Observable<any>{
-//   const token: any= localStorage.getItem('token');
-//   const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-//   return this._httpClient.get('http://bussinesshub.runasp.net/api/Cart/userCart',{headers}
-//   );
-//   }
+  totalPrice:BehaviorSubject<number>=new BehaviorSubject(0)
+  constructor(private _httpClient:HttpClient) { 
+    this.getUserCart().subscribe({
+     next:(res)=>{
+       this.totalPrice.next(res.totalprice)
+     }
+   })
+  }
 getUserCart():Observable<any>{
   const token: any= localStorage.getItem('token');
   const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

@@ -15,8 +15,13 @@
     border-radius: 50%;
     margin-bottom: 2px;
 }
+.discount{
+    color:grey ;
+    cursor: pointer;
+    margin-left: 180px;
+}
 .bookingsuccess{
-    margin-top: 100px;
+    margin-top: 200px;
 }
 .b{
     height: 50px;

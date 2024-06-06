@@ -20,6 +20,8 @@ import { RequestsHomeComponent } from './components/requests-home/requests-home.
 import { VendorLoginComponent } from './components/vendor-login/vendor-login.component';
 import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.component';
 import { BookServiceFormComponent } from './components/book-service-form/book-service-form.component';
+import { AllOrdersComponent } from './components/all-orders/all-orders.component';
+import { AllSessionsComponent } from './components/all-sessions/all-sessions.component';
 
 const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
@@ -34,7 +36,9 @@ const routes: Routes = [
   {path:"serviceDetails/:id",component:ServiceDetailsComponent},
   {path:"providerDetails/:id",component:ProviderDetailsComponent},
   {path:"checkout" , component:CheckoutComponent},
-  {path:"bookingForm/:id" , component:BookServiceFormComponent}
+  {path:"bookingForm/:id" , component:BookServiceFormComponent},
+  {path :"allOrder" , component:AllOrdersComponent},
+  {path:"allSessions" , component:AllSessionsComponent}
  
 
 ]},

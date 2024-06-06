@@ -11,7 +11,7 @@ export class AuthServiceService {
 
   constructor( private _httpClient:HttpClient) { }
   signIn(userData:object):Observable<any>{
-    return this._httpClient.post(`http://bussinesshub.runasp.net/api/Account/api/Account/Login`,userData)
+   return this._httpClient.post(`http://bussinesshub.runasp.net/api/Account/api/Account/Login`,userData)
   }
   signUp(userData:object):Observable<any>{
     return this._httpClient.post(`http://bussinesshub.runasp.net/api/Account/api/Account/Registration`,userData)
@@ -40,16 +40,6 @@ export class AuthServiceService {
     if(encode){
       const decode = jwtDecode(encode)
       console.log(decode)
-    }
-
-
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieParts = decodedCookie.split(';');
-    for (let i = 0; i < cookieParts.length; i++) {
-      const c = cookieParts[i].trim();
-      if (c.startsWith('token=')) {
-        return c.substring(8);
-      }
     }
     return null;
   }

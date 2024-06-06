@@ -8,13 +8,15 @@ import { BookingService } from 'src/app/services/booking.service';
 })
 export class RequestsHomeComponent {
  constructor(private _bookingService:BookingService){}
- sessions:any
+ sessions:any;
+ isEmpty:boolean=true;
  ngOnInit(){
   this.getAllBookingSessions();
  }
  getAllBookingSessions(){
   this._bookingService.getBookedSession().subscribe({
     next:(res)=>{
+      this.isEmpty=false;
       console.log(res);
       this.sessions=res
     },

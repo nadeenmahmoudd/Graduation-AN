@@ -35,6 +35,9 @@
 .form-control{
     height: 40px;
 }
+.search{
+    border-radius: 15px;
+}
 .productList .list .item .card img{
     /* position: relative; */
     width: 90%;
