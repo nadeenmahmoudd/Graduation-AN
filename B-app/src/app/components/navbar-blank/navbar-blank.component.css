@@ -7,9 +7,14 @@
 .span{
     cursor: pointer;
 }
+/* .imageObacity{
+   opacity: 0.5;
+} */
 .handshake{
    width: 4%;
    height: 4%;
+   /* width: 40px;
+   height: 40px; */
    border-radius: 50%;
 }
 .span:hover{

@@ -46,8 +46,10 @@ cart:any;
 removeItem(id:number){
   this._cartService.removeItem(id).subscribe({
     next:(res)=>{
+    //  this._cartService.count.next(res.usercart1)
       console.log(res);
       this.products=res
+      // this.count=res.quantity
       console.log("deleted");
       this.isCartEmpty = this.products.length === 0;
     

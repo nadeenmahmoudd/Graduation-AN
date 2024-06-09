@@ -53,7 +53,7 @@
     <button class="Confirmbtn">Confirm & Pay $ 37.17</button> -->
     <div class="mt-5">
       <form  (ngSubmit)="handelOrderForm(secNum,address)" [formGroup]="orderForm" class="h" >
-        <input type="number" class="d-flex b mt-3 form-control " name="secNum" [(ngModel)]="secNum" id="secNum" formControlName="secNum" placeholder="Enter your phone number">
+        <input type="number" class="d-flex b mt-3 form-control " name="secNum" [(ngModel)]="secNum" id="secNum" formControlName="secNum" placeholder="Enter your phone number :">
         <div *ngIf="orderForm.get('secNum')?.errors && (orderForm.get('secNum')?.touched) || (orderForm.get('secNum')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
         <p *ngIf="orderForm.get('secNum')?.getError('required')"> Mobile Number is Required</p>
         </div>

@@ -36,6 +36,10 @@ import { BookServiceFormComponent } from './components/book-service-form/book-se
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { AllSessionsComponent } from './components/all-sessions/all-sessions.component';
+import { CategoryComponent } from './components/category/category.component';
+import { SubCategoryByIdComponent } from './components/sub-category-by-id/sub-category-by-id.component';
+import { ProductsByIdComponent } from './components/products-by-id/products-by-id.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +73,10 @@ import { AllSessionsComponent } from './components/all-sessions/all-sessions.com
     FilterProductsPipe,
     AllOrdersComponent,
     AllSessionsComponent,
+    CategoryComponent,
+    SubCategoryByIdComponent,
+    ProductsByIdComponent,
+    OrderDetailsComponent,
   ],
   imports: [
     BrowserModule,

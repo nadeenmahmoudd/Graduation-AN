@@ -9,12 +9,8 @@ import { ShowAllServicesService } from 'src/app/services/show-all-services.servi
 })
 export class ServicesComponent {
 constructor(private _showAllServicesService:ShowAllServicesService){}
-images:string[]=["assets/images/6png.jpg","assets/images/1png.jpg",
-"assets/images/2png.jpg","assets/images/3png.jpg",
-"assets/images/4png.jpg","assets/images/5png.jpg",
-"assets/images/6png.jpg","assets/images/7png.jpg",
-"assets/images/8png.jpg","assets/images/9png.jpg",
-"assets/images/2png.jpg","assets/images/4png.jpg"] 
+images:string[]=["../../../assets/images/MarkeingA.jpeg" , "../../../assets/images/accountingA.jpeg", "../../../assets/images/logisticsA.jpeg", 
+  "../../../assets/images/consultA.jpeg"] 
 isLoading:boolean=false;
 all: Services[]=[]
 ngOnInit(){

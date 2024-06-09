@@ -19,6 +19,10 @@
       <div ><b class="text-main">User Name:</b> {{ session.userName }}</div>
       <div><b>Enrollment Code :</b> {{session.enrollmentCode}}</div>
         </div>
+        <span class="text-danger remove d-inline " (click)="removeItem(session.userId)" >
+          <i class="fa fa-trash "></i>
+          remove 
+      </span>
     <hr>
   </div>
 </div>

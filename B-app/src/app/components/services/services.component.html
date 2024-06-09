@@ -8,16 +8,15 @@
                 <span *ngIf="one.description.split(' ').length >4">...</span>
             </span> <br>
         <span class="d-flex justify-content-center align-items-center ">
-            <img src="../../../assets/images/2png.jpg">
+            <!-- <img src="../../../assets/images/2png.jpg"> -->
             <img [src]="one.imageUrl">
         </span>
 
         </div>
         <!-- <span>{{one.description}}</span> -->
     </div>
-
-   </div>
   </div>
+</div>
 </div>
 <div *ngIf="isLoading" class="position-absolute bg-black opacity-50 w-100 h-100 top-0 start-0 d-flex justify-content-center align-items-center ">
     <i class="fa fa-spin fa-spinner text-main fa-2xl"></i>

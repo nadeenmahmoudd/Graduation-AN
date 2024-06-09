@@ -1,50 +1,50 @@
-<!-- <h1>hh</h1>
-<div class="mt-4 bg-light " *ngFor="let order of userOrders">
- {{order}}
-</div>
-<div class="mt-4 bg-light " *ngFor="let session of userSessions">
-{{session}}
-</div> -->
 
-
- <!-- <div *ngFor="let order of userOrders">
-    <div>Order ID: {{ order.id }}</div>
-    <div>Order Date: {{ order.orderDate }}</div>
-    <div>User ID: {{ order.userId }}</div>
-    <div>User Address: {{ order.userAddress }}</div>
-    <div>Optional Number: {{ order.optionalNum }}</div>
-      <div *ngFor="let orderItem of order.orderItems">
-        <div>Product ID: {{ orderItem.product.id }}</div>
-        <div>Product Name: {{ orderItem.product.name }}</div>
-        <div>Product Description: {{ orderItem.product.description }}</div>
-        <div>Product Image: <img [src]="orderItem.product.imageUrl" alt="{{ orderItem.product.name }}"  style="width:100px ; height: 100px;"></div>
-        <div>Product Price: {{ orderItem.product.price }} EGP</div>
-        <div>Quantity: {{ orderItem.quantity }}</div>
-      </div>
-    </div> 
-     -->
-
+<!-- 
    <div class="bg-light p-5 mt-2 w-75 bigContainer ">
     <div *ngFor="let order of userOrders">
-        <div *ngFor="let orderItem of order.orderItems">
-       <div class="row align-items-center d-flex  " [title]="orderItem.product.name">
-        <div class="col-md-2" >
-            <div class="mt-2 ">
+      <div class="row align-items-center d-flex justify-content-center  ">       
+        <p class="text-main d-flex  justify-content-center">{{order.id}}</p>
+        <div class=""><b>Order Date :</b> {{order.orderDate | date:'fullDate'}}</div>
+          </div>
+      <hr>
+    </div>
+  </div> -->
+
+  <div class="bg-light p-5 mt-2 bigContainer ">
+    <div *ngFor="let order of userOrders">
+        <!-- <div *ngFor="let orderItem of order.orderItems"> -->
+          <div class=""   >
+            <div class="Centerfelnos"   [routerLink]="['/orderDetails/',order.id]">
+                <p class="text-main centerr">Order number : <b class="text-black">{{order.id}}</b> </p> 
+            <!-- <p>Click here to show Order details</p> -->
+             <button class="btnn">Show more </button>
+            </div>
+          <!-- </div> -->
+       <!-- <div class="row align-items-center d-flex  " [title]="orderItem.product.name"> -->
+        <!-- <div class="" > -->
+            <p class="DateText text-main align-items-center">Order Date</p>
+            <!-- <h6 class="Date d-flex ">{{order.orderDate | date:'fullDate'}}</h6> -->
+            <p class="Date d-flex text-center align-items-center"> <i class="fa-regular fa-calendar me-2"></i> {{order.orderDate | date:'fullDate'}} </p>
+            <!-- <p class="text-main">{{order.id}}</p> -->
+            <!-- <div class="mt-2 ">
                 <img [src]="orderItem.product.imageUrl"  class="w-100 productImage" >
-            </div>  
-        </div>
-        <div class="col-md-8 productName">
-           <div>
+            </div>   -->
+        <!-- </div> -->
+        <div class="">
+           <!-- <div>
             <p> <b>{{ orderItem.product.name | trim}}</b>
                 <span *ngIf="orderItem.product.name.split(' ').length >2">...</span>
             </p>
             <p class="text-main d-flex mt-2  h6">{{orderItem.product.price}} EGP</p>
-            <!-- <span class="text-main">{{x.totalOrderPrice}}</span> -->
-           </div>
-        </div>
+           </div> -->
+        <!-- </div> -->
        </div> 
-       <p class="DateText text-main">Order Date</p>
-       <h6 class="Date d-flex ">{{order.orderDate}}</h6>
+       <!-- <div class="">
+        <p class="DateText text-main align-items-center">Order Date</p>
+       <h6 class="Date d-flex ">{{order.orderDate | date:'fullDate'}}</h6>
+    
+
+       </div> -->
        <hr>
         </div>
 

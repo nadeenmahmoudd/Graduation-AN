@@ -22,6 +22,10 @@ import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.com
 import { BookServiceFormComponent } from './components/book-service-form/book-service-form.component';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { AllSessionsComponent } from './components/all-sessions/all-sessions.component';
+import { CategoryComponent } from './components/category/category.component';
+import { SubCategoryByIdComponent } from './components/sub-category-by-id/sub-category-by-id.component';
+import { ProductsByIdComponent } from './components/products-by-id/products-by-id.component';
+import { OrderDetailsComponent } from './components/order-details/order-details.component';
 
 const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
@@ -38,8 +42,10 @@ const routes: Routes = [
   {path:"checkout" , component:CheckoutComponent},
   {path:"bookingForm/:id" , component:BookServiceFormComponent},
   {path :"allOrder" , component:AllOrdersComponent},
-  {path:"allSessions" , component:AllSessionsComponent}
- 
+  {path:"allSessions" , component:AllSessionsComponent},
+  {path:"subCategory/:id" , component:SubCategoryByIdComponent},
+  {path:"productsOfCategory/:id" , component:ProductsByIdComponent},
+  {path:"orderDetails/:id" , component:OrderDetailsComponent},
 
 ]},
 {path:"",component:AuthLayoutComponent, children:[

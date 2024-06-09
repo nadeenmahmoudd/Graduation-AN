@@ -1,7 +1,9 @@
+
 .h{
     margin-top: 40px;
     width: 50%;
     align-items: center;
+    height: 250px;
     
 }
 .greenCheck{
@@ -33,14 +35,32 @@
     color:grey ;
 }
 .btn{
-    background-color: #DCAEFD;
+    background-color: white;
     border-radius:10px ;
+    border-color: #DCF;
     width: 200px;
     height: 44px;
     margin-left: 140px;
-    color: white;
+    color: black
 }
 .btn:hover{
     cursor: pointer;
 }
-
+.form-control{
+    margin-top: 70px;
+}
+.recit{
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 30px;
+    /* height: 900px; */
+    height: 100%;
+   background-image: url("../../../assets/images/purpleBG.jpg");
+   background-repeat:no-repeat ;
+   background-size: cover;
+    border-radius: 24px;
+  }
+  .clickmsg{
+   text-decoration:dotted;
+   color: blueviolet;
+  }

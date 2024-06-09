@@ -16,15 +16,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ProductsComponent {
 constructor( private _productsService:ProductsService , private _cartService:CartService,
-  private toastr: ToastrService ,
-   private _httpClient :HttpClient ){
+  private toastr: ToastrService  ){
 }
 
 ngOnInit(){
   this.showProducts();
-  // const token = 'your-jwt-token';
-  // const userId = this._testjwtService.getUserIdFromToken(token);
-  // console.log('User ID:', userId);
 }
 allProducts:Products[]=[]
 searchTerm:string="";

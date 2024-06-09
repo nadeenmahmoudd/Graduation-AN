@@ -8,11 +8,13 @@ import { BehaviorSubject, Observable, catchError, throwError } from 'rxjs';
   providedIn: 'root'
 })
 export class CartService {
-  totalPrice:BehaviorSubject<number>=new BehaviorSubject(0)
+  // totalPrice:BehaviorSubject<number>=new BehaviorSubject(0)
+  count:BehaviorSubject<number>=new BehaviorSubject(0)
   constructor(private _httpClient:HttpClient) { 
     this.getUserCart().subscribe({
      next:(res)=>{
-       this.totalPrice.next(res.totalprice)
+      //  this.totalPrice.next(res.totalprice)
+       this.count.next(res.usercart1)
      }
    })
   }
@@ -64,7 +66,7 @@ addToCart(id: number ): Observable<any> {
   })
 );
 }
-removeItem(id:number):Observable<any>{
+removeItem(id:any):Observable<any>{
   const token: any= localStorage.getItem('token');
   const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 return this._httpClient.delete(`http://bussinesshub.runasp.net/api/Cart?id=${id}`,{headers});

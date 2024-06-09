@@ -24,11 +24,11 @@ providerId:any;
  isBooked:boolean=true;
  notbookedDiv:boolean=false;
 BookingForm:FormGroup=new FormGroup({
-  name:new FormControl("",[Validators.required]),
-  email:new FormControl("",[Validators.required , Validators.email]),
-  mobileNumber: new FormControl("",[Validators.required ]),
-  // repassword: new FormControl("",[Validators.required ,Validators.pattern(/^\w{6,}$/)]),
-  address:new FormControl("",[Validators.required]),
+  // name:new FormControl("",[Validators.required]),
+  // email:new FormControl("",[Validators.required , Validators.email]),
+  // mobileNumber: new FormControl("",[Validators.required ]),
+  // // repassword: new FormControl("",[Validators.required ,Validators.pattern(/^\w{6,}$/)]),
+  // address:new FormControl("",[Validators.required]),
   code:new FormControl("",[Validators.required])
   
 })
