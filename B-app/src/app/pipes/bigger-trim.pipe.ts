@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class BiggerTrimPipe implements PipeTransform {
 
   transform(value: string): string {
-    return  (value.split(" ",4).join(" "));
+    return  (value.split(" ",8).join(" "));
   }
 
 }

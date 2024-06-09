@@ -90,6 +90,9 @@ export class BookingService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this._httpClient.get("http://bussinesshub.runasp.net/api/Cart/GetUserOrder" , {headers})
   }
+  getOrderDetailsById(id:number):Observable<any>{
+    return this._httpClient.get(`http://bussinesshub.runasp.net/api/Cart/GetUserOrderById?id=${id}`)
+  }
   getAllBookedSessions():Observable<any>{
     const token: any = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);

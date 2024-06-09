@@ -13,14 +13,14 @@ constructor( private _cartService:CartService , private _activatedRoute:Activate
 ngOnInit(){
   
   this.showUserCart()
- this._activatedRoute.paramMap.subscribe((res:any)=>{
-      console.log(res.get('id'))
-      this.id=res.get('id')
-    })
-    this._activatedRoute.params.subscribe(params=>{
-      const id= params['id'];
-      this.removeItem(this.id)
-})
+//  this._activatedRoute.paramMap.subscribe((res:any)=>{
+//       console.log(res.get('id'))
+//       this.id=res.get('id')
+//     })
+//     this._activatedRoute.params.subscribe(params=>{
+//       const id= params['id'];
+//       this.removeItem(this.id)
+// })
 }
 
   id:any;
@@ -46,10 +46,11 @@ cart:any;
 removeItem(id:number){
   this._cartService.removeItem(id).subscribe({
     next:(res)=>{
-    //  this._cartService.count.next(res.usercart1)
+     this._cartService.count.next(res.usercart1)
       console.log(res);
-      this.products=res
-      // this.count=res.quantity
+      this.products=res.list
+      this.count=res.usercart1
+      this.totalPrice=res.totalPrice
       console.log("deleted");
       this.isCartEmpty = this.products.length === 0;
     

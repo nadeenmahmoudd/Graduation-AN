@@ -101,8 +101,9 @@
 }
 
 .card-img, .card-img-bottom, .card-img-top {
-    width: 60% !important;
-    height: 80% !important;
+    width: 65% !important;
+    /* height: 80% !important; */
+    height: 150px;
     margin: auto;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;
@@ -111,8 +112,11 @@
     cursor: pointer;
 }
 .allProductsCategory{
-    width: 60% !important;
-    height: 50% !important;
+    /* width: 60% !important;
+    height: 60% !important; */
+    width: 65% !important;
+    /* height: 80% !important; */
+    height: 150px;
     margin: auto;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;

@@ -39,6 +39,7 @@ showProducts(){
 addToCart(productId:any){
 this._cartService.addToCart(productId ).subscribe({
   next:(res)=>{
+    this._cartService.count.next(res.usercart1)
     console.log(res);
     this.toastr.success('product added successfully!');
   },

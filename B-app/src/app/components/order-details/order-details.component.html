@@ -1,1 +1,70 @@
-<p>order-details works!</p>
+
+<!-- 
+  <div *ngIf="orderedProducts">
+    <h2>Order Details</h2>
+    <p><strong>Order ID:</strong> {{ orderedProducts.id }}</p>
+    <h3>Order Items</h3>
+    <ul>
+      <li *ngFor="let item of orderedProducts.orderItems">
+        <img [src]="item.product.imageUrl" alt="{{ item.product.name }}" width="100" height="100">
+        <p><strong>Product Name:</strong> {{ item.product.name }}</p>
+        <p><strong>Description:</strong> {{ item.product.description }}</p>
+        <p><strong>Price:</strong> {{ item.product.price }}</p>
+        <p><strong>Quantity:</strong> {{ item.quantity }}</p>
+      </li>
+    </ul>
+  </div> -->
+
+
+  <div class="container-fluid">
+    <div class="d-flex justify-content-between total  m-3">
+      <!-- <h3 class="spanaya"> Number of Items :<span class=" text-main"> {{count}}</span></h3>
+      <h3> Total price : <span class=" text-main">{{totalPrice}} </span></h3> -->
+    </div>  
+    <div class="row d-flex">
+      <div class="main">
+        <h1 class="main-text m-2">Your orderd Cart's details</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">product</th>
+              <th scope="col" class="quantity" >Quantity</th>
+  
+              <th scope="col" class="thPrice">Price </th>
+            </tr>
+          </thead>
+          <tbody>   
+              <tr *ngFor="let item of orderedProducts.orderItems" [title]="item.product.name">
+                
+              <td>
+                <div class=" d-flex containCart ">
+                  <div class="cart-img ">
+                    <img class="h-100 " [src]="item.product.imageUrl">
+                    <h5 class=" ">{{item.product.name | trim}} 
+                      <span *ngIf="item.product.name.split(' ').length >2">...</span>
+                    </h5>
+                  </div>
+                </div>
+              </td>
+              <td>
+  
+                <div class=" d-flex mt-5 quanity">
+                  <p class="quantitynumber "> {{item.quantity}}</p>
+                </div>
+  
+              </td>
+            
+  
+              <td>
+                <div class="price">
+                  <p>{{item.product.price *item.quantity}} EGP</p>
+                </div>
+              </td>
+            </tr>
+  
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </div>
