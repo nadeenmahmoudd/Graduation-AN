@@ -11,7 +11,7 @@
                         <h5 class="card-title d-flex justify-content-center ">{{oneProduct.name | trim}}
                             <span *ngIf="oneProduct.name.split(' ').length >2">...</span>
                         </h5>
-                        <p class=" ">{{oneProduct.price }} EGP</p>
+                        <p class="d-flex justify-content-center m-1 ">{{oneProduct.price }} EGP</p>
                         <button class="btn d-flex justify-content-center align-items-center" 
                         (click)="addToCart(oneProduct.id)">Add to Cart 
                          <i class="fa-solid fa-cart-shopping text-light "></i>
