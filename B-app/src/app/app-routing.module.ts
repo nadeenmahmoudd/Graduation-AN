@@ -26,6 +26,7 @@ import { CategoryComponent } from './components/category/category.component';
 import { SubCategoryByIdComponent } from './components/sub-category-by-id/sub-category-by-id.component';
 import { ProductsByIdComponent } from './components/products-by-id/products-by-id.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 
 const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
@@ -46,6 +47,8 @@ const routes: Routes = [
   {path:"subCategory/:id" , component:SubCategoryByIdComponent},
   {path:"productsOfCategory/:id" , component:ProductsByIdComponent},
   {path:"orderDetails/:id" , component:OrderDetailsComponent},
+  {path:"productDetails/:id" , component:ProductDetailsComponent},
+
 
 ]},
 {path:"",component:AuthLayoutComponent, children:[

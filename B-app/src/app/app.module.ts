@@ -40,6 +40,8 @@ import { CategoryComponent } from './components/category/category.component';
 import { SubCategoryByIdComponent } from './components/sub-category-by-id/sub-category-by-id.component';
 import { ProductsByIdComponent } from './components/products-by-id/products-by-id.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { BiggestTrimPipe } from './pipes/biggest-trim.pipe';
 
 @NgModule({
   declarations: [
@@ -77,6 +79,8 @@ import { OrderDetailsComponent } from './components/order-details/order-details.
     SubCategoryByIdComponent,
     ProductsByIdComponent,
     OrderDetailsComponent,
+    ProductDetailsComponent,
+    BiggestTrimPipe,
   ],
   imports: [
     BrowserModule,

@@ -11,4 +11,7 @@ export class ProductsService {
   getAllProducts():Observable<any>{
     return this._httpClient.get("http://bussinesshub.runasp.net/api/Products/AllProduct")
   }
+  getProductDetailsById(id:number):Observable<any>{
+   return this._httpClient.get(`http://bussinesshub.runasp.net/api/Product/${id}`)
+  }
 }

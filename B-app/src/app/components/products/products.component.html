@@ -5,9 +5,11 @@
             <div class="list">
                 <div class="item" *ngFor="let oneProduct of allProducts | filterProducts :searchTerm" 
                 [title]="oneProduct.name">
-                    <div class="card">
-                        <img  [src]="oneProduct.imageUrl" class="card-img-top   " alt="...">
-                        <div class="card-body">
+                    <div class="card" >
+                  <div>                  
+                 <img  [src]="oneProduct.imageUrl" class="card-img-top   "[routerLink]="['/productDetails/' ,oneProduct.id]"  alt="...">
+                  </div>                    
+                      <div class="card-body">
                             <h5 class="card-title d-flex justify-content-center ">{{oneProduct.name | trim}}
                                 <span *ngIf="oneProduct.name.split(' ').length >2">...</span>
                             </h5>

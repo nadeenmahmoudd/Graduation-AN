@@ -1,0 +1,20 @@
+
+.container{
+    margin-top:100px ;
+}
+.image{
+    
+    width: 65% !important;
+
+    height: 65% !important;
+    margin: auto;
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    border-end-end-radius: 20px !important;
+    border-end-start-radius: 20px !important;
+}
+.btn{
+    margin-top: 20px;
+margin-left: -10px;
+border-radius: 10px;
+}

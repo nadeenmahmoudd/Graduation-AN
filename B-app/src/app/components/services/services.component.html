@@ -3,7 +3,7 @@
    <div [routerLink]="['/serviceDetails/',one.id]">
     <div class="product p-2 bg-light cardd">
         <div class="align-content-center  ">
-            <span class="d-flex justify-content-center m-2" [title]="one.name"><b>{{one.name | trim1}}</b> <span *ngIf="one.name.split(' ').length >1">...</span> </span>
+            <span class="d-flex justify-content-center m-2 title" [title]="one.name"><b>{{one.name }}</b> </span>
             <span class="d-flex justify-content-center">{{one.description | biggerTrim}} ...
                 <!-- <span *ngIf="one.description.split(' ').length >8">...</span> -->
             </span> 

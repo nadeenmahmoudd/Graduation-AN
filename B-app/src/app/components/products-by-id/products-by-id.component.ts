@@ -7,7 +7,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 @Component({
   selector: 'app-products-by-id',
   templateUrl: './products-by-id.component.html',
-  styleUrls: ['./products-by-id.component.css']
+  styleUrls: ['./products-by-id.component.css' ]
 })
 export class ProductsByIdComponent {
 constructor(private _categoriesService:CategoriesService , private _activatedRoute:ActivatedRoute , 
@@ -35,8 +35,8 @@ showProductsById(id:number){
     }
   })
 }
-addToCart(productId:number){
-  this._cartService.addToCart(productId).subscribe({
+addToCart(id:number){
+  this._cartService.addToCart(id).subscribe({
     next:(res)=>{
       console.log(res);
       console.log(res.usercart1);
