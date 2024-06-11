@@ -101,9 +101,9 @@
 }
 
 .card-img, .card-img-bottom, .card-img-top {
-    width: 65% !important;
-    /* height: 80% !important; */
-    height: 150px;
+    width: 100% !important;
+    /* height: 95% !important; */
+    height: 195px;
     margin: auto;
     border-top-left-radius: 20px !important;
     border-top-right-radius: 20px !important;

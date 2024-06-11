@@ -8,13 +8,14 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./requests-home.component.css']
 })
 export class RequestsHomeComponent {
- constructor(private _bookingService:BookingService , private _cartService:CartService){}
+ constructor(private _bookingService:BookingService ){}
  sessions:any;
  isEmpty:boolean=true;
  ngOnInit(){
   this.getAllBookingSessions();
  }
  userId:any
+ id!:number
  getAllBookingSessions(){
   this._bookingService.getBookedSession().subscribe({
     next:(res)=>{
@@ -22,6 +23,7 @@ export class RequestsHomeComponent {
       console.log(res);
       this.sessions=res
       this.userId=res.userId
+      this.id=res.id
       
     },
     error:(err)=>{
@@ -31,11 +33,11 @@ export class RequestsHomeComponent {
   })
  }
 
- removeItem(userId:any){
-  this._cartService.removeItem(userId).subscribe({
+ removeSession(id:number){
+  this._bookingService.removeBookedSession(id).subscribe({
     next:(res)=>{
       console.log(res);
-     
+     this.sessions=res
       console.log("deleted");
       // this.isCartEmpty = this.products.length === 0;
     

@@ -16,13 +16,21 @@
 <div class="bg-light p-5 mt-2 w-75 bigContainer ">
   <div *ngFor="let session of sessions">
     <div class="row align-items-center d-flex justify-content-center  ">       
-      <div ><b class="text-main">User Name:</b> {{ session.userName }}</div>
+      <div ><b class="">User name:</b> {{ session.userName }}</div>
       <div><b>Enrollment Code :</b> {{session.enrollmentCode}}</div>
+      <div class="text-info"><b class="text-black fw-normal">User e-mail :</b> {{session.userEmail}}</div>
+    <div class="d-flex align-items-center justify-content-between ">
+      <p class="d-flex justify-content-center text-main fw-semibold">Please Contact with {{session.userName}} via e-mail</p>
+      <span class="text-success remove d-inline cursor d-flex justify-content-end " (click)="removeSession(session.id)" >
+        
+        Done <img src="../../../assets/images/greencheckk.png" class="greenCheck">
+    </span>
+    </div>
         </div>
-        <span class="text-danger remove d-inline " (click)="removeItem(session.userId)" >
-          <i class="fa fa-trash "></i>
-          remove 
-      </span>
+        <!-- <span class="text-success remove d-inline cursor d-flex justify-content-end " (click)="removeSession(session.id)" >
+          
+          Done <img src="../../../assets/images/greencheckk.png" class="greenCheck">
+      </span> -->
     <hr>
   </div>
 </div>

@@ -101,4 +101,8 @@ export class BookingService {
   getDiscountCode():Observable<any>{
     return this._httpClient.get("http://bussinesshub.runasp.net/api/Booking/selectCode")
   }
+  removeBookedSession(id:number):Observable<any>{
+  return this._httpClient.delete(`http://bussinesshub.runasp.net/api/Booking/deleteBookingItem?id=${id}`)
+  }
+  
 }

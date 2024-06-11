@@ -1,8 +1,4 @@
-.esm{
-    /* color:  #DCAEFD; */
-    color: blueviolet;
- 
-}
+
 .span{
     cursor: pointer;
 }
@@ -18,7 +14,7 @@ h3{
     cursor: pointer;
 }
 .esm{
-    color: #DCAEFD;
+    color:blueviolet;
 }
 .esm-gded{
     /* color: blueviolet; */
