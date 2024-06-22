@@ -42,6 +42,7 @@ this._cartService.addToCart(productId ).subscribe({
     this._cartService.count.next(res.usercart1)
     console.log(res);
     this.toastr.success('product added successfully!');
+    
   },
   error:(err)=>{
     console.log(err);

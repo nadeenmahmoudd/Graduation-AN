@@ -12,7 +12,9 @@
     /* --rating-color: #ffc908; */
 }
 
-
+.cursor{
+    cursor: pointer;
+}
 
 /* div{
     background-color: var(--main-color);
@@ -72,7 +74,9 @@ a:hover {
     background-color: var(--light-color) !important;
 }
 .btn{
-    background-color: #DCAEFD;
+    /* background-color: #DCAEFD; */
+    background-color: #8a2be4;
+
     border-radius:20px ;
     width: 200px;
     height: 44px;

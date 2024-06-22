@@ -39,15 +39,15 @@ export class ProductDetailsComponent {
     next:(res)=>{
       console.log(res);
       this._cartService.count.next(res.usercart1)
-      // this.toastr.success('product added successfully!');
-      this.toastr.success(res.message, '',{
-        timeOut:2000,
-        progressBar:true,
-        positionClass:'toast-bottom-right'})
+      this.toastr.success('product added successfully!');
+      // this.toastr.success(res.message, '',{
+      //   timeOut:2000,
+      //   progressBar:true,
+      //   positionClass:'toast-top-right'})
     },
     error:(err)=>{
       console.log(err);
-      this.toastr.error(err.error , 'Error' );
+      this.toastr.error(err.error , 'Error , err.error' );
       
     }
   })

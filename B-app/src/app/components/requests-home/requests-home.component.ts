@@ -10,7 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class RequestsHomeComponent {
  constructor(private _bookingService:BookingService ){}
  sessions:any;
- isEmpty:boolean=true;
+isEmpty:boolean=true
  ngOnInit(){
   this.getAllBookingSessions();
  }
@@ -22,6 +22,7 @@ export class RequestsHomeComponent {
       this.isEmpty=false;
       console.log(res);
       this.sessions=res
+        this.isEmpty=this.sessions.length === 0;
       this.userId=res.userId
       this.id=res.id
       

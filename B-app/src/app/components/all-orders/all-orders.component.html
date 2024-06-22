@@ -1,18 +1,12 @@
+<!-- <div *ngIf="isOrdered; else notEmpty" class=" ">
+  <h3 class="d-flex justify-content-center align-items-center  noOrderMsg  ">You have no orders yet. Go shopping!</h3>
+</div> -->
 
-<!-- 
-   <div class="bg-light p-5 mt-2 w-75 bigContainer ">
-    <div *ngFor="let order of userOrders">
-      <div class="row align-items-center d-flex justify-content-center  ">       
-        <p class="text-main d-flex  justify-content-center">{{order.id}}</p>
-        <div class=""><b>Order Date :</b> {{order.orderDate | date:'fullDate'}}</div>
-          </div>
-      <hr>
-    </div>
-  </div> -->
 
+<!-- <ng-template #notEmpty> -->
+    
   <div class="bg-light p-5 mt-2 bigContainer ">
     <div *ngFor="let order of userOrders">
-        <!-- <div *ngFor="let orderItem of order.orderItems"> -->
           <div class=""   >
             <div class="Centerfelnos"   [routerLink]="['/orderDetails/',order.id]">
                 <p class="text-main centerr">Order number : <b class="text-black">{{order.id}}</b> </p> 
@@ -51,3 +45,4 @@
   
     </div>
    </div>
+<!-- </ng-template> -->

@@ -13,6 +13,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class BookingService {
   constructor(private _httpClient: HttpClient) {}
+  
   bookSession(providerId: number, code: any): Observable<any> {
     const token: any = localStorage.getItem('token');
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
@@ -90,8 +91,11 @@ export class BookingService {
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
     return this._httpClient.get("http://bussinesshub.runasp.net/api/Cart/GetUserOrder" , {headers})
   }
+  // getOrderDetailsById(id:number):Observable<any>{
+  //   return this._httpClient.get(`http://bussinesshub.runasp.net/api/Cart/GetUserOrderById?id=${id}`)
+  // }
   getOrderDetailsById(id:number):Observable<any>{
-    return this._httpClient.get(`http://bussinesshub.runasp.net/api/Cart/GetUserOrderById?id=${id}`)
+return this._httpClient.get(`http://bussinesshub.runasp.net/api/Cart/GetUserOrderById?id=${id}`)
   }
   getAllBookedSessions():Observable<any>{
     const token: any = localStorage.getItem('token');
@@ -101,8 +105,11 @@ export class BookingService {
   getDiscountCode():Observable<any>{
     return this._httpClient.get("http://bussinesshub.runasp.net/api/Booking/selectCode")
   }
+
   removeBookedSession(id:number):Observable<any>{
-  return this._httpClient.delete(`http://bussinesshub.runasp.net/api/Booking/deleteBookingItem?id=${id}`)
+    const token: any = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+  return this._httpClient.delete(`http://bussinesshub.runasp.net/api/Booking/deleteBookingItem?id=${id}`,{headers})
   }
   
 }

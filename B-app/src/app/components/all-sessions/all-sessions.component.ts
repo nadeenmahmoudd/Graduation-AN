@@ -13,12 +13,16 @@ ngOnInit(){
   this.getAllSessions();
 }
 userBookings:any
+isBookedSession:boolean=false
 getAllSessions(){
   this._bookingService.getAllBookedSessions().subscribe({
     next:(res)=>{
       console.log("ana el sessions");
       console.log(res);
-this.userBookings=res      
+      this.isBookedSession=true
+      
+this.userBookings=res   
+// this.NoSessions = this.userBookings.length === 0;   
       
     },
     error:(err)=>{

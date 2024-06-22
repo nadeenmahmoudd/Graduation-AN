@@ -16,7 +16,7 @@
         <thead>
           <tr>
             <th scope="col">product</th>
-            <th scope="col" class="quantitybuttons" >Quantity</th>
+            <th scope="col" class="quantitybuttons " >Quantity</th>
 
             <th scope="col" class="thPrice">Price </th>
           </tr>
@@ -28,8 +28,8 @@
               <div class=" d-flex ">
                 <div class="cart-img">
                   <img class="h-100 " [src]="product.product.imageUrl">
-                  <h5 class=" ">{{product.product.name | trim}} 
-                    <span *ngIf="product.product.name.split(' ').length >2">...</span>
+                  <h5 class=" ">{{product.product.name | trim1}} 
+                    <span *ngIf="product.product.name.split(' ').length >1">...</span>
                   </h5>
                 </div>
               </div>
@@ -75,27 +75,4 @@
 
 
 
-<!-- <br> <br><br>
 
-<div class="bg-light p-4">
-  <div class="row align-items-center " *ngFor="let product of products">
-    <div class="col-md-2">
-        <div>
-            <img [src]="product.product.imageUrl" class="w-50 h-25 p-2">
-        </div>
-    </div>
-    <div class="col-md-8">
-       <div>
-        <h4>{{product.product.name |trim}}</h4>
-        <span class="text-main">{{product.product.price}}</span>
-        <div class="remove">
-            <span class="text-danger">
-                <i class="fa fa-trash "></i>
-                remove
-            </span>
-        </div>
-       </div>
-    </div>
-  
-    </div>
-</div> -->

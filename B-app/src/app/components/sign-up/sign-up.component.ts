@@ -15,15 +15,13 @@ export class SignUpComponent {
 SignUpForm:FormGroup=new FormGroup({
   name:new FormControl("",[Validators.required]),
   email:new FormControl("",[Validators.required , Validators.email]),
-  // password: new FormControl("",[Validators.required ,Validators.pattern(/^\w{6,}$/)]),
-  // repassword: new FormControl("",[Validators.required ,Validators.pattern(/^\w{6,}$/)]),
 
-  password: new FormControl("",[Validators.required ]),
-  confirmPassword: new FormControl("",[Validators.required]),
+
+  password: new FormControl("",[Validators.required ,Validators.pattern(/^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?":{}|<>]).*$/) ]),
+  confirmPassword: new FormControl("",[Validators.required , ]),
   address:new FormControl("",[Validators.required])
-})
-// handelSignUpForm(){
-// }
+},{validators:this.misMatch})
+
 handelSignUpForm(){
   this.isLoading=true;
  this.authServiceService.signUp(this.SignUpForm.value).subscribe({
@@ -41,4 +39,13 @@ handelSignUpForm(){
   }
  })
 }
+misMatch(g:any){
+  if(g.get('password').value === g.get('confirmPassword').value){
+   return null
+  }
+ else{
+   g.get('confirmPassword').setErrors({'mismatch':"not matched"})
+   return {'mismatch':"not matched"}
+ }
+ }
 }

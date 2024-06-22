@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+.container{
+
+  padding-top: 40px;
+  margin: auto;
+
+  /* padding-left: 75px; */
+}
 .main{
     top: 232px;
     left: 96px;
@@ -129,3 +136,4 @@ cursor: pointer;
     /* color: #cb9afd; */
     border-color: #cb9afd;
 }
+
