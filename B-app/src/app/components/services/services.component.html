@@ -3,19 +3,15 @@
   <div class="col-md-3" *ngFor="let one of all" [title]="one.description">
    <div [routerLink]="['/serviceDetails/',one.id]">
     <div class="product p-2 bg-light cardd">
-        <div class="align-content-center  ">
+        <div class="align-content-center ">
             <span class="d-flex justify-content-center m-2 title" [title]="one.name"><b>{{one.name }}</b> </span>
             <span class="d-flex justify-content-center">{{one.description | biggerTrim}} ...
-                <!-- <span *ngIf="one.description.split(' ').length >8">...</span> -->
             </span> 
-            <!-- <br> -->
         <span class="d-flex justify-content-center align-items-center ">
-            <!-- <img src="../../../assets/images/2png.jpg"> -->
             <img [src]="one.imageUrl" class="w-100  image m-2">
         </span>
 
         </div>
-        <!-- <span>{{one.description}}</span> -->
     </div>
   </div>
 </div>

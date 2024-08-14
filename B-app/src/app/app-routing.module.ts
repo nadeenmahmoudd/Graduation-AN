@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { AboutComponent } from './components/about/about.component';
 import { CartComponent } from './components/cart/cart.component';
-import { ProfilesComponent } from './components/profiles/profiles.component';
 import { ProductsComponent } from './components/products/products.component';
 import { ServicesComponent } from './components/services/services.component';
 import { LoginComponent } from './components/login/login.component';
@@ -22,7 +20,6 @@ import { VendorLayoutComponent } from './layouts/vendor-layout/vendor-layout.com
 import { BookServiceFormComponent } from './components/book-service-form/book-service-form.component';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { AllSessionsComponent } from './components/all-sessions/all-sessions.component';
-import { CategoryComponent } from './components/category/category.component';
 import { SubCategoryByIdComponent } from './components/sub-category-by-id/sub-category-by-id.component';
 import { ProductsByIdComponent } from './components/products-by-id/products-by-id.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
@@ -32,9 +29,7 @@ const routes: Routes = [
   {path:"",component:BlankLayoutComponent, canActivate:[authGuard],children:[
   {path:"",redirectTo:'home' , pathMatch:"full"},
   {path:"home" , component:HomeComponent} ,
-  {path:"about" , component:AboutComponent} ,
   {path:"cart" , component:CartComponent} ,
-  {path:"profiles" , component:ProfilesComponent} ,
   {path:"products" , component:ProductsComponent} ,
   {path:"services" , component:ServicesComponent} ,
   {path:"categories" , component:CategoriesComponent},

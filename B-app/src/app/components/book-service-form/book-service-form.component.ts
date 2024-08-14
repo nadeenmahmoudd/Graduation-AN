@@ -19,7 +19,7 @@ constructor( private _bookingService:BookingService , private _serviceDetailsSer
 }
 code: string="";
 discountCode:string=""
-
+errorMsg:string=""
 providerId:any;
  isBooked:boolean=true;
  notbookedDiv:boolean=false;
@@ -49,7 +49,8 @@ this.code=res.bookingCode
     },
     error:(err)=>{
       console.log(err);
-      
+      this.errorMsg ="Internal server error "
+      // this.errorMsg="internal server error"
     }
   })
 }

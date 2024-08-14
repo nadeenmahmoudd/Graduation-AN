@@ -34,12 +34,13 @@
               <div class="alert  alert-danger b d-flex  mt-2  errorDiv" *ngIf="notbookedDiv">
                  <h5 class="elerror "> Error, Try again <img class="errorimg" src="../../../assets/images/false sign 1.jpeg"> </h5>
               </div>
+              <b class=" text-danger d-flex errorMsg fw-bolder mt-2 w-100 align-items-center">{{errorMsg}}  </b>
           </form>
       </div>
          <ng-template #booked>
           <div class="text-success bookingsuccess" >
              <h1 class="mt-5"> you have booked successfully!</h1>
-             <img src="../../../assets/images/greencheckk.png" class="greenCheck">
+             <img src="../../../assets/images/greencheckk.png" class="greenCheck" style="border-radius: 50%;">
           </div>
          </ng-template>
       </div>

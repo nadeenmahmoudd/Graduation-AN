@@ -7,27 +7,27 @@ import { BookingService } from 'src/app/services/booking.service';
   styleUrls: ['./all-orders.component.css']
 })
 export class AllOrdersComponent {
-constructor(private _bookingService:BookingService){}
-userOrders:any;
-userSessions:any
-isOrdered:boolean=false
-ngOnInit(){
-  this.getAllOrders();
-}
-getAllOrders(){
-  this._bookingService.getAllOrders().subscribe({
-    next:(res)=>{
-      console.log("ana el orders");
-      // this.NoOrders = this.userOrders.length === 0;
-      this.isOrdered=true
-      console.log(res);
-    this.userOrders=res
-    },
-    error:(err)=>{
-console.log(err);
+  userOrders: any[] = [];
+  isOrdered: boolean = false;
 
-    }
-  })
-}
+  constructor(private _bookingService: BookingService) {}
 
+  ngOnInit() {
+    this.getAllOrders();
+  }
+
+  getAllOrders() {
+    this._bookingService.getAllOrders().subscribe({
+      next: (res) => {
+        console.log("ana el orders");
+        this.userOrders = res;
+
+        // Set isOrdered to true if there are orders, false if not
+        this.isOrdered = this.userOrders.length > 0;
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
+  }
 }

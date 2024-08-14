@@ -2,12 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AboutComponent } from './components/about/about.component';
 import { ServicesComponent } from './components/services/services.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { CartComponent } from './components/cart/cart.component';
-import { ProfilesComponent } from './components/profiles/profiles.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
@@ -36,7 +34,7 @@ import { BookServiceFormComponent } from './components/book-service-form/book-se
 import { FilterProductsPipe } from './pipes/filter-products.pipe';
 import { AllOrdersComponent } from './components/all-orders/all-orders.component';
 import { AllSessionsComponent } from './components/all-sessions/all-sessions.component';
-import { CategoryComponent } from './components/category/category.component';
+// import { CategoryComponent } from './components/category/category.component';
 import { SubCategoryByIdComponent } from './components/sub-category-by-id/sub-category-by-id.component';
 import { ProductsByIdComponent } from './components/products-by-id/products-by-id.component';
 import { OrderDetailsComponent } from './components/order-details/order-details.component';
@@ -46,12 +44,11 @@ import { BiggestTrimPipe } from './pipes/biggest-trim.pipe';
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     ServicesComponent,
     LoginComponent,
     SignUpComponent,
     CartComponent,
-    ProfilesComponent,
+    // ProfilesComponent,
     ProductsComponent,
     HomeComponent,
     NotfoundComponent,
@@ -75,7 +72,7 @@ import { BiggestTrimPipe } from './pipes/biggest-trim.pipe';
     FilterProductsPipe,
     AllOrdersComponent,
     AllSessionsComponent,
-    CategoryComponent,
+    // CategoryComponent,
     SubCategoryByIdComponent,
     ProductsByIdComponent,
     OrderDetailsComponent,

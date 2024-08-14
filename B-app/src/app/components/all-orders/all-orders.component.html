@@ -1,48 +1,23 @@
-<!-- <div *ngIf="isOrdered; else notEmpty" class=" ">
-  <h3 class="d-flex justify-content-center align-items-center  noOrderMsg  ">You have no orders yet. Go shopping!</h3>
-</div> -->
+<div *ngIf="!isOrdered; else notEmpty" class="">
+  <h3 class="d-flex justify-content-center align-items-center noOrderMsg">
+    You have no orders yet. Go shopping!
+  </h3>
+</div>
 
-
-<!-- <ng-template #notEmpty> -->
-    
-  <div class="bg-light p-5 mt-2 bigContainer ">
+<ng-template #notEmpty>
+  <div class="bg-light p-5 mt-2 bigContainer">
     <div *ngFor="let order of userOrders">
-          <div class=""   >
-            <div class="Centerfelnos"   [routerLink]="['/orderDetails/',order.id]">
-                <p class="text-main centerr">Order number : <b class="text-black">{{order.id}}</b> </p> 
-            <!-- <p>Click here to show Order details</p> -->
-             <button class="btnn">Show order details</button>
-            </div>
-          <!-- </div> -->
-       <!-- <div class="row align-items-center d-flex  " [title]="orderItem.product.name"> -->
-        <!-- <div class="" > -->
-            <p class="DateText text-main align-items-center">Order Date</p>
-            <!-- <h6 class="Date d-flex ">{{order.orderDate | date:'fullDate'}}</h6> -->
-            <p class="Date d-flex text-center align-items-center"> <i class="fa-regular fa-calendar me-2"></i> {{order.orderDate | date:'fullDate'}} </p>
-            <!-- <p class="text-main">{{order.id}}</p> -->
-            <!-- <div class="mt-2 ">
-                <img [src]="orderItem.product.imageUrl"  class="w-100 productImage" >
-            </div>   -->
-        <!-- </div> -->
-        <div class="">
-           <!-- <div>
-            <p> <b>{{ orderItem.product.name | trim}}</b>
-                <span *ngIf="orderItem.product.name.split(' ').length >2">...</span>
-            </p>
-            <p class="text-main d-flex mt-2  h6">{{orderItem.product.price}} EGP</p>
-           </div> -->
-        <!-- </div> -->
-       </div> 
-       <!-- <div class="">
-        <p class="DateText text-main align-items-center">Order Date</p>
-       <h6 class="Date d-flex ">{{order.orderDate | date:'fullDate'}}</h6>
-    
-
-       </div> -->
-       <hr>
+      <div class="">
+        <div class="Centerfelnos" [routerLink]="['/orderDetails/', order.id]">
+          <p class="text-main centerr">Order number : <b class="text-black">{{ order.id }}</b></p>
+          <button class="btnn">Show order details</button>
         </div>
-
-  
+        <p class="DateText text-main align-items-center">Order Date</p>
+        <p class="Date d-flex text-center align-items-center">
+          <i class="fa-regular fa-calendar me-2"></i> {{ order.orderDate | date:'fullDate' }}
+        </p>
+        <hr>
+      </div>
     </div>
-   </div>
-<!-- </ng-template> -->
+  </div>
+</ng-template>

@@ -22,6 +22,11 @@
     cursor: pointer;
     margin-left: 180px;
 }
+.errorMsg{
+    margin-left: 130px;
+    font-size: x-large;
+
+}
 .bookingsuccess{
     margin-top: 200px;
 }
