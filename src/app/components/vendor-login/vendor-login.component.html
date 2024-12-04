@@ -1,0 +1,44 @@
+
+<section class="vLog">
+    <div class="row">
+      <div class="img">
+    <img src="../../../assets/images/Vector Smart Object.png" alt="">
+  
+      </div>
+      <div class="content">
+        <div class="d-flex justify-content-center ">
+          <form  (ngSubmit)="handelLoginForm()" [formGroup]="loginForm" class="h">              
+             <a href="assets\images\files\needed data to login as vendor.txt" target="_blank" class="" >Click here to view login data</a>
+     
+              <h3>Company's Login </h3> 
+
+              <!-- <input type="text" class=" b d-flex form-control " id="companyName" formControlName="companyName" placeholder="Company's Name ">
+              <div *ngIf="loginForm.get('companyName')?.errors && (loginForm.get('companyName')?.touched) || (loginForm.get('companyName')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+                  <p *ngIf="loginForm.get('companyName')?.getError('required')" class=""> The Company name is required</p>
+              </div> -->
+  
+              <input type="email" class=" b d-flex form-control mt-3  " id="email" formControlName="email" placeholder="Enter your e-mail">
+              <div *ngIf="loginForm.get('email')?.errors && (loginForm.get('email')?.touched) || (loginForm.get('email')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-1 ">
+                  <p *ngIf="loginForm.get('email')?.getError('required')" class=""> Email is required</p>
+                  <p *ngIf="loginForm.get('email')?.getError('email')">Invalid Email</p>
+              </div>
+  
+              <input type="password" class="d-flex b mt-3 form-control " id="password" formControlName="password" placeholder="Enter your password">
+              <div *ngIf="loginForm.get('password')?.errors && (loginForm.get('password')?.touched) || (loginForm.get('password')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+              <p *ngIf="loginForm.get('password')?.getError('required')"> Password is required</p>
+  
+              </div>
+              <div class="alert alert-danger d-flex b mt-3 form-control" *ngIf="errorMsg">
+                  {{errorMsg}}
+             </div>
+  
+              <button  [disabled]="loginForm.invalid"class="btnn d-flex justify-content-center align-items-center ">Login
+                  <i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i>
+              </button>
+              </form>
+          </div>
+      </div>
+    </div>
+  </section>
+  
+

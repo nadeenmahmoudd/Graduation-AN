@@ -1,0 +1,51 @@
+"email": "info@afb.org",
+"password": "AFBConsulting011?",
+
+"email": "info@dalerioconsulting.com",
+"password": "Dalerio011?",
+
+"email": "Sales@worldcargoegypt.com",
+"password": "WorldCargo011?",
+
+"email": "ClixPlus@gmail.com",
+"password": "ClixPlus011?",
+
+"email": "info@kaiilab.com",
+"password": "KaiiLab011?",
+
+"email": "info@a-h-g.net",
+"password": "AHG-Chartered011",
+
+"email": "info@a-t-c.net",
+"password": "ATCGroup011?",
+
+"email": "info@selectdigital.agency",
+"password": "SelectDigital011?",
+
+
+"email": "info@abdallahshalash.com",
+"password": "Abdallah011?",
+
+"email": "Nile@gmail.com",
+"password": "Nile011?",
+
+"email": " info@egylogistics.com",
+"password": "EGYLogistics011?",
+
+"email": "Hello@Massiveet-Eg.Com",
+"password": "Massive011?",
+
+"email": "info@epxlogistics.com",
+"password": "EPxLogistics011?",
+
+"email": "info@nlegypt.com",
+"password": "NanoLogistics011?",
+
+"email": "info@enjaz.com.eg",
+"password": "Enjaz011?",
+
+"email": "info@logistica.com.eg",
+"password": "Logistca011?",
+
+"email": "info@acumenconsult.com ",
+"password": "AcumenConsulting011?",

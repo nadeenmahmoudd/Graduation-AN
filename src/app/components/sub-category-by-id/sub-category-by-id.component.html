@@ -1,0 +1,18 @@
+<section class="Categories">
+    <div class="container-fluid">
+        <div class="content">
+<div class="categories-items" >
+    <div class="card catigories-item" *ngFor="let subCategory of subCategories" >
+     
+    <div   [routerLink]="['/productsOfCategory/',subCategory.id]" >
+        <img [src]="subCategory.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h4>{{subCategory.name}}</h4>
+        </div>
+    </div>
+     
+    </div>
+</div>
+        </div>
+    </div>
+</section>

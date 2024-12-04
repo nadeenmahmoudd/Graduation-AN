@@ -1,0 +1,20 @@
+<div class="container m-auto p-3">
+    <div class="row g-3 position-relative mt-5 ">
+        <h2 class="d-flex justify-content-center mb-3 fw-bold text-main">Our Services</h2>
+      <div class="col-md-3" *ngFor="let one of all  | slice:0:4" [title]="one.description">
+       <div [routerLink]="['/serviceDetails/',one.id]">
+        <div class="product p-2 bg-light cardd">
+            <div class="align-content-center ">
+                <span class="d-flex justify-content-center m-2 title" [title]="one.name"><b>{{one.name }}</b> </span>
+                <span class="d-flex justify-content-center">{{one.description | biggerTrim}} ...
+                </span> 
+            <span class="d-flex justify-content-center align-items-center ">
+                <img [src]="one.imageUrl" class="w-100  image m-2">
+            </span>
+    
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="container m-auto p-4">
+
+<div *ngIf="!isOrdered; else notEmpty" class="">
+  <h3 class="d-flex justify-content-center align-items-center noOrderMsg">
+    You have no orders yet. Go shopping!
+  </h3>
+</div>
+
+<ng-template #notEmpty>
+  <div class="bg-light p-5 mt-2 bigContainer">
+    <div *ngFor="let order of userOrders">
+      <div class="">
+        <div class="Centerfelnos" [routerLink]="['/orderDetails/', order.id]">
+          <p class="text-main centerr">Order number : <b class="text-black">{{ order.id }}</b></p>
+          <button class="btnn">Show order details</button>
+        </div>
+        <p class="DateText text-main align-items-center">Order Date</p>
+        <p class="Date d-flex text-center align-items-center">
+          <i class="fa-regular fa-calendar me-2"></i> {{ order.orderDate | date:'fullDate' }}
+        </p>
+        <hr>
+      </div>
+    </div>
+  </div>
+</ng-template>
+</div>

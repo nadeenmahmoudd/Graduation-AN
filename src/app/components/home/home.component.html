@@ -1,0 +1,87 @@
+<section class="sectionMain">
+  <div class="backG p-5">
+    <div class="content">
+      <h1 class="titleMain "> Find the best Business solutions</h1>
+
+              <div class="d-flex justify-content-around">
+
+            <div class="containerWelcome p-4 ">
+              <p>   
+          Welcome to our Business Consulting Hub, where we offer expert guidance and tailored solutions for business owners. Our platform includes a comprehensive range of consulting services aimed at driving growth and efficiency. Additionally, our e-commerce section allows businesses to stock essential products conveniently. We provide exclusive discount codes on our services to make top-tier consulting more affordable. Join us today to transform your business!
+              </p> 
+            
+                                </div>
+                </div>
+              </div>
+                <img src="../../../assets\images\imgBg.png" class="  homeImg">
+
+
+  </div>
+  <div  class="container mt-5 mb-5">
+
+      <div class="accor1">
+        <div class="accordion accordion-flush main-color " id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-bold shadow " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                Our services explained
+              </button>
+            </h2>
+
+            <div id="flush-collapseOne" class="accordion-collapse show collapse" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="acc-item step1">
+                  <img [src]="images[0]" alt=""class="bounce-animation">
+                  <div class="item-text">
+                    <h3 class="item-h3">Step 1</h3>
+                    <p>Browse through our comprehensive list of business consulting services to find the ones that match your needs.</p>
+                  </div>
+                </div>
+                <div class="acc-item mid">
+                  <img [src]="images[1]" alt=""class="bounce-animation">
+                  <div class="item-text">
+                  <h3 class="item-h3 mt-4">Step 2</h3>
+                  
+                    <p>Select a service and choose from a variety of reputable companies specializing in that area. Book a session with your chosen company effortlessly.</p>
+                  </div>
+                </div>
+                <div class="acc-item">
+                  <img [src]="images[2]" alt="" class="bounce-animation">
+                  <div class="item-text">
+                  <h3 class="item-h3">Step 3</h3>
+                
+                    <p>Explore our e-commerce section to purchase high-quality goods in selected categories. Enjoy the convenience of consulting and shopping all in one platform!</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="home-service " style="background-image: url(../../../assets/images/purpleBG.jpg);  background-repeat:no-repeat ;
+    background-size: cover;">
+      <div class="container">
+        <div class="home-service-item">
+          <img [src]="images[3]" alt="">
+          <div class="home-service-item-text">
+            <h2 class="main-text">Your business is in safe hands</h2>
+            <p class="secondary-text">We prioritize your business security, employing top-notch encryption methods to safeguard your data. Trust us for secure data storage and protection.</p>
+            <button class="try-now" [routerLink]="['/services']">Try Now</button>
+          </div>
+
+        </div>
+        <div  class="home-service-item item2">
+          <div id="serv-text2" class="home-service-item-text item2-text">
+            <h2 class="main-text">Smart cost-cutting solutions</h2>
+            <p class="secondary-text">Enhance your business with cost-saving strategies, efficient operations, and exclusive discounts. Benefit from tailored solutions and special offers with our provided discount codes to streamline processes and boost your bottom line.</p>
+            <button class="try-now"  [routerLink]="['/services']">Try Now</button>
+          </div>
+          <img id="serv-img2" [src]="images[4]" alt="">
+
+        </div>
+      </div>
+     
+    </section>
+</section>
+<app-footer></app-footer>

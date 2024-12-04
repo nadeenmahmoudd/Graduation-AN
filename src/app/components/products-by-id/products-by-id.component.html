@@ -1,0 +1,37 @@
+<section class="productList">
+    <div class="container m-auto pt-5">
+        <input type="text" class="form-control my-3 w-50 mx-auto search " 
+        [(ngModel)]="searchTerm" placeholder=" search..."> 
+        <div class="list">
+            <div class="item" *ngFor="let oneProduct of products | filterProducts :searchTerm" 
+            [title]="oneProduct.name">
+                <div class="card" >
+                   <div>
+                    <img
+                      [src]="oneProduct.imageUrl || fallBackImgs"
+                      class="card-img-top cursor w-100"
+                      [routerLink]="['/productDetails/', oneProduct.id]"
+                      alt="{{ oneProduct.name }}"
+                      (error)="handleImageError($event)"
+                    />
+                  </div>
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-center mt-3">{{oneProduct.name | trim}}
+                            <span *ngIf="oneProduct.name.split(' ').length >2">...</span>
+                        </h5>
+                        <p class="d-flex justify-content-center m-1 ">{{oneProduct.price }} EGP</p>
+                        <button class="btn d-flex justify-content-center align-items-center"  style="background-color:  #8a2be4;"
+                        (click)="addToCart(oneProduct.id)">Add to Cart 
+                         <i class="fa-solid fa-cart-shopping text-light "></i>
+                        </button>
+                        <!-- <div class="btn d-flex justify-content-center align-items-center mt-4  "(click)="addToCart(oneProduct.id)">
+                            <a >Add To Cart</a>
+                            <i class="fa-solid fa-cart-shopping text-light "></i>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
+</section>

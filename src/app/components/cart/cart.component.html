@@ -1,0 +1,86 @@
+<div class="container m-auto">
+<div *ngIf="isCartEmpty; else notEmpty">
+  <h3 class="d-flex justify-content-center align-items-center mt-2  ">The cart is empty </h3>
+  <img src="../../../assets/images/empty Cart.jpg" class=" d-flex justify-content-center align-items-center w-50 emptycart ">
+</div>
+<ng-template #notEmpty>
+  
+<div class="container-fluid">
+  <div class="d-flex justify-content-between total  m-3">
+    <h3 class="spanaya"> Number of Items :<span class=" text-main"> {{count}}</span></h3>
+    <h3> Total price : <span class=" text-main">{{totalPrice}} </span></h3>
+  </div>  
+  <div class="row d-flex">
+    <div class="main">
+      <h1 class="main-text m-2">Cart</h1>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">product</th>
+            <th scope="col" class="quantitybuttons " >Quantity</th>
+
+            <th scope="col" class="thPrice">Price </th>
+          </tr>
+        </thead>
+        <tbody>   
+            <tr *ngFor="let product of products" [title]="product.product.name">
+              
+            <td>
+              <div class=" d-flex ">
+                <div class="cart-img">                  
+                    <img
+                      [src]="product.product.imageUrl || fallBackImgs"
+                      class="h-100"
+    
+                      alt="{{ product.product.name }}"
+                      (error)="handleImageError($event)"
+                    />
+                
+                  <h5 class=" ">{{product.product.name | trim1}} 
+                    <span *ngIf="product.product.name.split(' ').length >1">..</span>
+                  </h5>
+                </div>
+              </div>
+
+
+              <div class="cart-descrption  ">
+       <br>
+              </div>
+              <span class="text-danger remove d-inline " (click)="removeItem(product.id)" >
+                <i class="fa fa-trash "></i>
+                remove 
+            </span> 
+            </td>
+            <td>
+
+              <div class=" d-flex mt-5 ">
+                <button class="button bg-light" (click)="updateCart(product.id,product.quantity+1 )"> + </button>
+                <p class="m-2 "> {{product.quantity}}</p>
+                <button class="button  bg-light "(click)="updateCart(product.id,product.quantity-1 )"> - </button>
+              </div>
+
+            </td>
+          
+
+            <td>
+              <div class="price">
+                <p>{{product.product.price*product.quantity}} EGP</p>
+              </div>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+</div>
+<button class="btn  checkoutbtn"
+          routerLink="/checkout"> CheckOut 
+        </button>
+
+</ng-template>
+
+</div>
+
+

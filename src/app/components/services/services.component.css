@@ -1,0 +1,24 @@
+.image{
+    height: 250px;
+}
+.cardd{
+    border-radius: 10px;
+   
+}
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  h2 {
+    font-style: italic;
+    animation: bounce 2s ease infinite;
+  }
+  
+.title{
+    font-style: italic;
+}

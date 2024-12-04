@@ -1,0 +1,88 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+:root {
+    --main-color: #cb9afd ;
+    --light-color: #f0f3f2;
+    --text-color:#1c1c1c;
+    --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+
+    /* --font-family: 'Encode Sans Expanded', sans-serif; */
+    /* --rating-color: #ffc908; */
+}
+
+.cursor{
+    cursor: pointer;
+}
+
+/* div{
+    background-color: var(--main-color);
+    width: 200px;
+    height:200px ;
+} */
+.main-color{
+    color: var(--main-color);
+}
+.rating-color {
+    color: var(--rating-color);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.product:hover {
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+
+.product .btn {
+    transition: transform 1s, opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.item:hover .btn {
+    opacity: 1;
+    transform: translateY(0%);
+
+}
+
+.font-sm {
+    font-size: 14px;
+}
+
+/* .main-text {
+    color: var(--text-color);
+    font-weight: 600;
+} */
+.text-main {
+    color: var(--main-color);
+}
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+    background-color: var(--light-color) !important;
+}
+.btn{
+    /* background-color: #DCAEFD; */
+    background-color: #8a2be4;
+
+    border-radius:20px ;
+    width: 200px;
+    height: 44px;
+    margin-left: 140px;
+    color: white;
+}
+.btn:hover{
+    cursor: pointer;
+}

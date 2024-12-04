@@ -1,0 +1,28 @@
+
+.span{
+    cursor: pointer;
+}
+.span:hover{
+    cursor: pointer;
+    color:  #DCAEFD;
+    font-size: large;
+}
+.hi{
+    color:  #DCAEFD;
+}
+h3{
+    cursor: pointer;
+}
+.esm{
+    color:blueviolet;
+}
+.esm-gded{
+    /* color: blueviolet; */
+    color: #DCAEFD;
+
+}
+.handshake{
+    width: 4%;
+    height: 4%;
+    border-radius: 50%;
+ }

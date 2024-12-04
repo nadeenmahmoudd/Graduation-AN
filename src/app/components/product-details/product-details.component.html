@@ -1,0 +1,32 @@
+<div class="container m-auto p-5">
+    <div class="row align-items-center position-relative  mt-5 " >
+        <div class="col-md-4"> 
+            <div>
+                <img
+                  [src]="product.imageUrl || fallBackImgs"
+                  style="width: 100px; height: 100px;" class="image"
+                  [routerLink]="['/productDetails/', product.id]"
+                  alt="{{ product.name }}"
+                  (error)="handleImageError($event)"
+                />
+              </div>
+        </div>
+        <div class="col-md-8 " >
+    <div>
+        <h5 [title]="product.name">{{product.name | biggerTrim}}
+            <span *ngIf="product.name.split(' ').length >8">...</span>
+        </h5>
+        
+        <p [title]="product.description">{{product.description | biggestTrim}}
+            <span *ngIf="product.description.split(' ').length >50">...</span>
+        </p>
+        <div class="  ">
+            <span class="d-flex  justify-content-center align-items-center"><b>{{product.price}} </b>EGP</span>
+        </div>
+        <button class=" btn d-block bg-main w-100 text-white " (click)="addToCart(product.id)">+Add to cart</button>
+    </div>
+        </div>
+       
+    </div>
+</div>
+

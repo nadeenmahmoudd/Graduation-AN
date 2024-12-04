@@ -1,0 +1,71 @@
+
+.h{
+    margin-top: 40px;
+    width: 50%;
+    align-items: center;
+    height: 250px;
+    
+}
+.greenCheck{
+    margin-left: 35%
+}
+.elerror{
+    margin-left:30%;
+}
+.errorimg{
+    height: 30px;
+    border-radius: 50%;
+    margin-bottom: 2px;
+}
+.discount{
+    color:grey ;
+    cursor: pointer;
+    margin-left: 180px;
+}
+.errorMsg{
+    margin-left: 130px;
+    font-size: x-large;
+
+}
+.bookingsuccess{
+    margin-top: 200px;
+}
+.b{
+    height: 50px;
+    border-radius: 10px;
+    width: 500px; 
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+}
+.new{
+    color:grey ;
+}
+.btn{
+    background-color: white;
+    border-radius:10px ;
+    border-color: #DCF;
+    width: 200px;
+    height: 44px;
+    margin-left: 140px;
+    color: black
+}
+.btn:hover{
+    cursor: pointer;
+}
+.form-control{
+    margin-top: 70px;
+}
+.recit{
+    width: 60%;
+    margin-left: 15%;
+    margin-top: 30px;
+    /* height: 900px; */
+    height: 100%;
+   background-image: url("../../../assets/images/purpleBG.jpg");
+   background-repeat:no-repeat ;
+   background-size: cover;
+    border-radius: 24px;
+  }
+  .clickmsg{
+   text-decoration:dotted;
+   color: blueviolet;
+  }
