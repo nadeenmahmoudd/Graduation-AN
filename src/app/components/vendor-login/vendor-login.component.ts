@@ -11,7 +11,7 @@ import { BookingService } from 'src/app/services/booking.service';
 export class VendorLoginComponent {
   constructor( private _router:Router ,private _bookingService:BookingService){}
   loginForm:FormGroup =new FormGroup({
-    // companyName:new FormControl("",[Validators.required]),
+    companyName:new FormControl("",[Validators.required]),
     email :new FormControl("",[Validators.required,Validators.email]),
     password: new FormControl("",[Validators.required])
   })
