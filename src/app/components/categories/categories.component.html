@@ -1,0 +1,27 @@
+
+    <section class="Categories">
+        <div class="container-fluid">
+            <div class="content">
+              
+                    <div class="categories-items" >
+                        <div class="card catigories-item" *ngFor="let category of categories" >
+                         
+                        <div  [routerLink]="['/subCategory/',category.id]">
+                            <img [src]="category.imageUrl" class="card-img-top " alt="...">
+                            <div class="card-body">
+                                <h4 class="mt-2">{{category.name}}</h4>
+                            </div>
+                        </div>
+                         
+                        </div>
+                    <div class="card catigories-item ">
+     <img src="../../../assets/images/allProducts2.jpg" class=" allProductsCategory " alt="..." routerLink="/products">
+                     <div class="card-body">
+                      <h4 class="mt-2">All products</h4>
+                  </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>

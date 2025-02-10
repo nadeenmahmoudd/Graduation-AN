@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+.main{
+    top: 232px;
+    left: 96px;
+    /* width: 824px; */
+    /* width: 100%; */            /* De el momken a3melaha uncomment 3ashan arga3 eladem */
+    width: 60%;
+/* width:850px; */
+    margin-left: 200px;            /*w de */
+    /* height: 684px; */
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0px 2px 10px rgba(3,3,3,0.1);
+  }
+  .total{
+    width: 82%;                                   /* w amsah de */
+  }
+  .spanaya{
+    margin-left: 100px;                                  /* w de */
+  }
+  .emptycart{
+   margin-left: 285px;
+   height: 450px;
+
+  }
+  .main-text {
+    color: #1d1d1d;
+    font-size: 32px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 42px;
+  }
+.remove{
+cursor: pointer;    
+}
+
+  img{
+    /* width: 70%; */
+    height: 70px;
+  }
+  /* .n{
+    width: 300px;
+  } */
+   .containCart{
+    margin-bottom: 23px;
+   }
+  .cart-img{
+    /* top: 404px;
+  left: 136px;*/
+  /* width: 100px;  */
+  /* width: 10%; */
+  height: 80px;
+  border-radius: 24px;
+
+  /* background-image: url(../images/Home/Image\ \(61\).png); */
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  }
+
+  .cart-descrption{
+    /* width: 28%; */
+    padding-top:20px ; 
+    margin-left: 10%;
+  }
+  .cart-descrption h2{
+    margin: auto;
+    color: #1d1d1d;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 20px;
+  }
+  .quantitynumber{
+    margin-left: 40px;
+    margin-top: 5px;
+  }
+.quanity{
+    text-align: center;
+    align-items: center;
+    /* top: 424px; */
+    /* left: 591px; */
+    margin-top: 25%;
+     /* margin-left: -15px;  */
+    margin-right: 100px; 
+    width: 104px;
+    height: 40px;
+    padding: 0px 8px;
+    border: 1px solid #dfdfdf;
+    box-sizing: border-box;
+    border-radius: 24px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.08);
+    background-color: #ffffff;
+    color: #1d1d1d;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    line-height: 20px;
+    outline: none;
+}
+.quanity p{
+    text-align: center;
+    /* margin: auto; */
+    padding-top: 11px;
+}
+.price{
+    /* margin-left: 25px; */
+    font-weight: 500;
+    /* margin-left: 0%; */
+    margin-top: 25%;
+}
+.checkoutbtn{
+   margin: 450px;
+   margin-top:2%;
+}
+.button{
+    border-radius: 14px;
+    box-shadow: #ffffff;
+    border-color: white;
+    width: 30px;
+    display: flex;
+    
+}
+.button:hover{
+    background: white;
+    /* color: #cb9afd; */
+    border-color: #cb9afd;
+}

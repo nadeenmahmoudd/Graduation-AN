@@ -1,0 +1,33 @@
+.bigContainer{
+    margin-left: 15%;
+    width: 70%;
+}
+.productImage{
+    height: 80px;
+}
+/* .Date{
+    margin-left: 500px;
+}
+.DateText{
+    margin-left:530px ;
+} */
+ .centerr{
+    margin-left: 40px;
+ }
+ .Centerfelnos{
+    margin-left: 200px;
+ }
+ .btnn{
+    background-color: #DCAEFD;
+    border-radius:20px ;
+    width: 200px;
+    height: 44px;
+    margin-left: 20px;
+    color: white;
+    border: 1px solid;
+    border-color: #DCAEFD;
+}
+.noOrderMsg{
+    margin-top: 150px;
+    color: blueviolet;
+}

@@ -1,0 +1,49 @@
+ <nav
+    class="navbar navbar-expand-sm navbar-light bg-light fixed-top "
+>
+    <div class="container"  >
+        <img src="../../../assets/images/partnership.png" class="handshake g-3 imageObacity ">
+        <h3 class="esm" routerLink="/home">BCHub  </h3>
+        <div class="collapse navbar-collapse " id="collapsibleNavId">
+            <ul class="navbar-nav me-auto mt-2 mt-lg-0 navbarGeded">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/home" routerLinkActive="hi fw-bold ">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/services" routerLinkActive="hi fw-bold ">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/categories" routerLinkActive="hi fw-bold ">Categories</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/cart" routerLinkActive="hi fw-bold ">Cart</a>
+                </li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="historyDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          History
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="historyDropdown">
+                          <li><a class="dropdown-item" routerLink="/allOrder">All Orders</a></li>
+                          <li><a class="dropdown-item" routerLink="/allSessions">Booked Services</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+            </ul>
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0 me-3 gap-3  ">
+             <!-- <div><i class="fa-solid fa-cart-shopping text-main "></i></div> -->
+             <li class="nav-item " >
+                <i class="fa fa-shopping-cart">
+                    <div class="badge bg-main ">{{numberOfItems}}</div>
+                </i>
+                <li class="nav-item " >
+                   <span (click)="signOut()" class="span"> Log Out</span>
+                </li>
+            </ul>
+           
+        </div>
+    </div>
+</nav>
+

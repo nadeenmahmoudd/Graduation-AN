@@ -1,0 +1,37 @@
+<div class="container pt-5 m-auto">
+    <div class="d-flex justify-content-center  recit">
+      <div>
+          <p class="d-flex justify-content-center mt-4 h6 clickmsg text-main">Click on Generate code and Enjoy the dicount  <i class="fa-solid fa-arrow-down align-items-center m-1"></i>
+              <img src="../../../assets/images/voucher.png" style="width: 40px; height: 40px;">
+          </p>
+          <form  (ngSubmit)="handelBookingForm(providerId,code)" [formGroup]="BookingForm" class="h" *ngIf="isBooked; else booked">
+              <input type="text" class="d-flex b  form-control " id="code" name="code" [(ngModel)]="code" formControlName="code" placeholder="Put your code">
+              <div *ngIf="BookingForm.get('code')?.errors && (BookingForm.get('code')?.touched) || (BookingForm.get('code')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-1 ">
+              <p *ngIf="BookingForm.get('code')?.getError('required')"> Discount Code is Required</p>
+              </div>
+            <div>
+              <a (click)="generateDiscountCode()" class="d-flex discount mt-2 w-100 align-items-center">
+                  <img src="../../../assets/images/promo-code.png" style="width: 20px; height: 20px;">
+                   Generate code
+                   <img src="../../../assets/images/promo-code.png" style="width: 20px; height: 20px;">
+  
+              </a>
+            </div>
+              <button  [disabled]="BookingForm.invalid"class="btn mt-4 d-flex justify-content-center align-items-center " (click)="handelBookingForm(providerId,code)">Submit
+              </button>
+  
+              <div class="alert b d-flex  mt-2  errorDiv" *ngIf="notbookedDiv">
+                 <h5 class="elerror "> Error, Try again <img class="errorimg" src="../../../assets/images/false sign 1.jpeg"> </h5>
+              </div>
+              <b class=" text-danger d-flex errorMsg fw-bolder mt-2 w-100 align-items-center">{{errorMsg}}  </b>
+          </form>
+      </div>
+         <ng-template #booked>
+          <div class="text-success bookingsuccess" >
+             <h1 class="mt-5"> you have booked successfully!</h1>
+             <img src="../../../assets/images/greencheckk.png" class="greenCheck" style="border-radius: 50%;">
+          </div>
+         </ng-template>
+      </div>
+  </div>
+  

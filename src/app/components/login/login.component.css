@@ -1,0 +1,62 @@
+.logSec{
+    margin-top: 50px;
+  
+  }
+  .row{
+    justify-content: space-around;
+  
+  }
+  .img{
+    width: 30%;
+  }
+  .content{
+    width: 50%;
+    text-align: center;
+  
+  }
+  .content h3{
+    margin-top: 70px;
+  }
+  .content input{
+    border-radius: 20px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    width: 350px;
+    height: 43px;
+  }
+  /* .h{
+      margin-top: 130px;
+      width: 50%;
+      align-items: center;
+  
+  } */
+  .b{
+      height: 50px;
+      border-radius: 20px;
+      width: 350px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      
+  }
+  p{
+    text-align: center;
+  }
+  .btnn{
+      background-color: #8a2be4;
+      border-radius:20px ;
+      width: 200px;
+      height: 44px;
+      color: white;
+      margin-top: 20px;
+      cursor: pointer;
+      border: 1px solid #8a2be4;
+  }
+  
+  .btnn:hover{
+    background-color: rgba(138, 43, 228,0.7);
+  }
+  .new{
+      color:grey ;
+  }
+  .text:hover{
+    color: #8a2be4;
+  }
+  

@@ -1,0 +1,38 @@
+<section class="logSec">
+    <div class="container">
+      <div class="row">
+          <div class="img">
+    <img src="../../../assets/images/Vector Smart Object.png" alt="">
+  </div>
+  <div class="content">
+    <p class="d-flex justify-content-end mt-3 new">Login as a Company? <a class="fw-bold text" routerLink="/vendor-login">Login</a></p>
+    <div class="d-flex justify-content-center ">
+        <form  (ngSubmit)="handelLoginForm()" [formGroup]="loginForm" class="h">
+            <!-- <label for="email">email</label> -->
+            <h3 class="mb-4" >Login </h3>
+            <input type="email" class=" b form-control " id="email" formControlName="email" placeholder="Enter Your E-mail">
+            <div *ngIf="loginForm.get('email')?.errors && (loginForm.get('email')?.touched) || (loginForm.get('email')?.value.Length>0)" class="alert alert-danger b d-flex form-control mt-2 ">
+                <p *ngIf="loginForm.get('email')?.getError('required')" class=""> Email is required</p>
+                <p *ngIf="loginForm.get('email')?.getError('email')">Invalid Email</p>
+            </div>
+  
+            <!-- <label for="password">password</label> -->
+            <input type="password" class="d-flex b mt-3 form-control " id="password" formControlName="password" placeholder="Enter Your Password">
+            <div *ngIf="loginForm.get('password')?.errors && (loginForm.get('password')?.touched) || (loginForm.get('password')?.value.Length>0)" class="alert  alert-danger b d-flex form-control mt-2 ">
+            <p *ngIf="loginForm.get('password')?.getError('required')"> Password is Required</p>
+  
+            <!-- <p *ngIf="loginForm.get('password')?.getError('pattern')">It must be atleast 6 chars </p> -->
+            </div>
+            <div class="alert alert-danger d-flex b mt-3 form-control" *ngIf="errorMsg">
+                {{errorMsg}}
+           </div>
+  
+            <button  [disabled]="loginForm.invalid"class="btnn">Login
+                <i *ngIf="isLoading" class="fa fa-spin fa-spinner"></i>
+            </button>
+  
+            </form>
+        </div></div> </div>
+    </div>
+  </section>
+  
